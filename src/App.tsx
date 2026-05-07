@@ -10,6 +10,7 @@ import NotFound from "@/pages/not-found";
 import React from "react";
 import aboutImage from "@assets/ChatGPT_Image_May_4,_2026,_06_03_24_PM_1777914210882.png";
 import servicesImage from "@assets/ChatGPT_Image_May_4,_2026,_06_05_49_PM_1777914363236.png";
+import logo from "@assets/logo.png";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +32,7 @@ function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 backdrop-blur-md bg-background/80 border-b border-border/40">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="font-serif font-bold text-xl tracking-tight text-foreground flex items-center gap-2">
-            <div className="w-4 h-4 bg-primary rounded-full" />
+            <img src={logo} alt="OEN Digitals Logo" className="h-8 w-auto mr-2" />
             Empower<span className="text-muted-foreground">Digital</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -57,6 +58,10 @@ function Home() {
           className="max-w-4xl mx-auto"
           data-testid="section-hero"
         >
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-medium">
+            I provide web design, booking systems, and digital support for small businesses across <strong>Wales</strong>{" "}
+            {"and "}<strong>Pembrokeshire</strong>. I help you build simple, effective websites and tools that actually work for your day-to-day business.
+          </p>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold uppercase tracking-wider mb-6 border border-primary/20">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -64,7 +69,6 @@ function Home() {
             </span>
             Digital Empowerment Specialist
           </div>
-          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] text-foreground">
             Technology that works for you, <span className="text-primary italic">not against you.</span>
           </h1>
@@ -166,12 +170,12 @@ function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="rounded-2xl overflow-hidden mb-12 shadow-xl relative"
+            className="rounded-2xl mb-12 shadow-xl relative bg-secondary/40 border border-border/50"
           >
             <img
               src={servicesImage}
               alt="Services overview"
-              className="w-full object-cover object-center max-h-[420px]"
+              className="block w-full rounded-2xl object-contain"
               data-testid="img-services"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
@@ -216,12 +220,12 @@ function Home() {
             transition={{ duration: 0.6 }}
             className="md:w-1/2 relative"
           >
-            <div className="aspect-square rounded-2xl overflow-hidden relative group shadow-2xl">
+            <div className="aspect-[1424/1104] rounded-2xl relative group shadow-2xl bg-secondary/40 border border-border/50">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent z-10"></div>
               <img
                 src={aboutImage}
                 alt="Digital Empowerment Specialist"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                className="block w-full h-full rounded-2xl object-contain group-hover:scale-[1.02] transition-transform duration-700"
                 data-testid="img-about"
               />
             </div>
