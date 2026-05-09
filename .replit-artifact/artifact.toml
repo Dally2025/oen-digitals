@@ -29,3 +29,7 @@ to = "/index.html"
 [services.env]
 PORT = "24772"
 BASE_PATH = "/"
+
+[metadata]
+description = "Digital Empowerment Specialist artifacts"
+image = "/home/denisebyrnes37/oen-digitals/oen-digitals/oen-digitals/artifacts/digital-empowerment/public/og-image.jpg"
