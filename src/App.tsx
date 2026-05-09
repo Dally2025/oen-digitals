@@ -402,12 +402,12 @@ function SiteFooter() {
           className="inline-flex text-foreground/70 hover:text-primary transition-colors"
         >
           Terms & Conditions
-        </a>
-        <a
-          href="/complaints-procedure"
-          className="inline-flex text-foreground/70 hover:text-primary transition-colors"
-        >
-          Complaints Procedure
+          </a>
+          <a
+            href="/complaints"
+            className="inline-flex text-foreground/70 hover:text-primary transition-colors"
+          >
+            Complaints Procedure
         </a>
       </div>
     </footer>
@@ -965,6 +965,7 @@ function Router() {
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/cookie" component={CookiePolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
+      <Route path="/complaints" component={ComplaintsProcedure} />
       <Route path="/complaints-procedure" component={ComplaintsProcedure} />
       <Route path="/website-design-pembrokeshire" component={WebsiteDesignPembrokeshire} />
       <Route component={NotFound} />
