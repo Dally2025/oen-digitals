@@ -108,7 +108,7 @@ function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="h-14 px-8 text-base rounded-full shadow-xl shadow-primary/25 w-full sm:w-auto group" data-testid="button-hero-primary">
               <a href="#contact" onClick={smoothScroll}>
-                Book Your Free Digital Clarity Call
+                Send an Enquiry
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
@@ -117,6 +117,10 @@ function Home() {
                 Email Me Today
               </a>
             </Button>
+          </div>
+
+          <div className="mt-10">
+            <ContactForm />
           </div>
         </motion.div>
       </section>
