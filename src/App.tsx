@@ -11,7 +11,6 @@ import React from "react";
 import aboutImage from "@assets/ChatGPT_Image_May_4,_2026,_06_03_24_PM_1777914210882.png";
 import servicesImage from "@assets/ChatGPT_Image_May_4,_2026,_06_05_49_PM_1777914363236.png";
 import logo from "@assets/oendigitalslogo2.png";
-import qrCode from "@assets/oendigitalqr.jpeg";
 
 const queryClient = new QueryClient();
 const privacyPolicyUrl =
@@ -56,7 +55,7 @@ function Home() {
             <a href="#services" onClick={smoothScroll} className="text-foreground/80 hover:text-primary transition-colors" data-testid="link-nav-services">Services</a>
             <a href="#process" onClick={smoothScroll} className="text-foreground/80 hover:text-primary transition-colors" data-testid="link-nav-process">Process</a>
             <a href="#about" onClick={smoothScroll} className="text-foreground/80 hover:text-primary transition-colors" data-testid="link-nav-about">About</a>
-            <a href="mailto:enquiries@oendigitals.co.uk" className="text-foreground/80 hover:text-primary transition-colors" data-testid="link-nav-email">Contact</a>
+            <a href="#contact" onClick={smoothScroll} className="text-foreground/80 hover:text-primary transition-colors" data-testid="link-nav-contact">Contact</a>
           </div>
           <Button asChild className="rounded-full shadow-lg shadow-primary/20 hidden sm:inline-flex" data-testid="button-nav-cta">
             <a href="#contact" onClick={smoothScroll}>Book a Call</a>
@@ -322,20 +321,9 @@ function Home() {
           data-testid="section-contact"
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Ready to take control?</h2>
-          <p className="text-xl text-secondary-foreground/70 mb-10 max-w-xl mx-auto">
-            Stop letting technology dictate your day. Let's build a system that works for you.
+          <p className="text-xl text-secondary-foreground/70 mb-8 max-w-xl mx-auto">
+            Send an enquiry below and I will get back to you as soon as possible.
           </p>
-
-          <div className="mb-10 flex justify-center">
-            <div className="rounded-lg border border-white/10 bg-white p-2 shadow-2xl shadow-primary/20">
-              <img
-                src={qrCode}
-                alt="OEN Digitals QR code"
-                className="h-36 w-36 rounded object-contain sm:h-40 sm:w-40"
-                data-testid="img-contact-qr"
-              />
-            </div>
-          </div>
           
           <ContactForm />
 
