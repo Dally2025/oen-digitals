@@ -1,3 +1,6 @@
-.vercel
-oen-digitals/oen-digitals/artifacts/digital-empowerment/public/og-image.jpg
+node_modules/
+dist/
 .vercel/
+oen-digitals.zip
+oen-digitals/oen-digitals/
+oen-digitals/oen-digitals/artifacts/digital-empowerment/public/og-image.jpg

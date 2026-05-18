@@ -14,7 +14,6 @@ import logo from "@assets/oendigitalslogo2.png";
 import qrCode from "@assets/oendigitalqr.jpeg";
 
 const queryClient = new QueryClient();
-const bookingFormUrl = "https://forms.gle/hxgvBHHS85Gvt3UP7";
 const privacyPolicyUrl =
   "https://docs.google.com/document/d/e/2PACX-1vQkOQUVcIaXQCsfAh6_jIvJocnZ_RBfmc0SVY7M3JQ_X30SrM6bHNAojwAzE-638osTBznxf3Iiqjca/pub?embedded=true";
 const cookiePolicyUrl =
@@ -37,6 +36,8 @@ const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   }
 };
 
+const formspreeUrl = "https://formspree.io/f/mwkajnkl";
+
 function Home() {
   return (
     <div className="min-h-screen w-full bg-background text-foreground selection:bg-primary selection:text-primary-foreground overflow-x-hidden">
@@ -58,7 +59,7 @@ function Home() {
             <a href="mailto:enquiries@oendigitals.co.uk" className="text-foreground/80 hover:text-primary transition-colors" data-testid="link-nav-email">Contact</a>
           </div>
           <Button asChild className="rounded-full shadow-lg shadow-primary/20 hidden sm:inline-flex" data-testid="button-nav-cta">
-            <a href={bookingFormUrl} target="_blank" rel="noreferrer">Book a Call</a>
+            <a href="#contact" onClick={smoothScroll}>Book a Call</a>
           </Button>
         </div>
       </nav>
@@ -107,7 +108,7 @@ function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="h-14 px-8 text-base rounded-full shadow-xl shadow-primary/25 w-full sm:w-auto group" data-testid="button-hero-primary">
-              <a href={bookingFormUrl} target="_blank" rel="noreferrer">
+              <a href="#contact" onClick={smoothScroll}>
                 Book Your Free Digital Clarity Call
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
@@ -336,12 +337,9 @@ function Home() {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild className="h-14 px-8 text-base rounded-full shadow-2xl shadow-primary/20 bg-primary text-primary-foreground hover:bg-primary/90 w-full sm:w-auto" data-testid="button-footer-primary">
-              <a href={bookingFormUrl} target="_blank" rel="noreferrer">
-                Book Your Free Digital Clarity Call
-              </a>
-            </Button>
+          <ContactForm />
+
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full border-secondary-foreground/20 hover:bg-secondary-foreground hover:text-secondary w-full sm:w-auto" data-testid="button-footer-secondary">
               <a href="mailto:enquiries@oendigitals.co.uk">
                 Email Me Today
@@ -357,6 +355,65 @@ function Home() {
       <CookieBanner />
 
     </div>
+  );
+}
+
+function ContactForm() {
+  return (
+    <form
+      action={formspreeUrl}
+      method="POST"
+      className="mx-auto grid max-w-2xl gap-4 rounded-lg border border-white/10 bg-background/90 p-5 text-left shadow-2xl shadow-primary/10 backdrop-blur sm:p-6"
+      data-testid="form-contact"
+    >
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="grid gap-2 text-sm font-medium text-foreground">
+          Name
+          <input
+            type="text"
+            name="name"
+            required
+            className="h-12 rounded-md border border-border bg-background px-4 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+            autoComplete="name"
+          />
+        </label>
+        <label className="grid gap-2 text-sm font-medium text-foreground">
+          Email
+          <input
+            type="email"
+            name="email"
+            required
+            className="h-12 rounded-md border border-border bg-background px-4 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+            autoComplete="email"
+          />
+        </label>
+      </div>
+      <label className="grid gap-2 text-sm font-medium text-foreground">
+        Subject
+        <input
+          type="text"
+          name="subject"
+          className="h-12 rounded-md border border-border bg-background px-4 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+          autoComplete="off"
+        />
+      </label>
+      <label className="grid gap-2 text-sm font-medium text-foreground">
+        Message
+        <textarea
+          name="message"
+          rows={5}
+          required
+          className="resize-y rounded-md border border-border bg-background px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/30"
+        />
+      </label>
+      <Button
+        type="submit"
+        className="h-14 rounded-full text-base shadow-xl shadow-primary/20"
+        data-testid="button-contact-submit"
+      >
+        Send Enquiry
+      </Button>
+    </form>
   );
 }
 
@@ -494,7 +551,7 @@ function WebsiteDesignPembrokeshire() {
             />
           </a>
           <Button asChild className="rounded-full shadow-lg shadow-primary/20">
-            <a href={bookingFormUrl} target="_blank" rel="noreferrer">
+            <a href="/#contact">
               Book a Call
             </a>
           </Button>
@@ -527,12 +584,12 @@ function WebsiteDesignPembrokeshire() {
             </div>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild className="h-14 rounded-full px-8">
-                <a href={bookingFormUrl} target="_blank" rel="noreferrer">
+                <a href="/#contact">
                   Start a project
                 </a>
               </Button>
               <Button size="lg" asChild className="h-14 rounded-full px-8">
-                <a href={bookingFormUrl} target="_blank" rel="noreferrer">
+                <a href="/#contact">
                   Book Your Free Digital Clarity Call
                 </a>
               </Button>
@@ -849,7 +906,7 @@ function WebsiteDesignPembrokeshire() {
             </div>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild className="h-14 rounded-full px-8">
-                <a href={bookingFormUrl} target="_blank" rel="noreferrer">
+                <a href="/#contact">
                   Start a Project
                 </a>
               </Button>
