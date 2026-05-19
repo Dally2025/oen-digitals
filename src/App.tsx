@@ -35,7 +35,7 @@ const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   }
 };
 
-const formspreeUrl = "https://formspree.io/f/mwkajnkl";
+const enquiryEmail = "enquiries@oendigitals.co.uk";
 
 function Home() {
   return (
@@ -113,7 +113,7 @@ function Home() {
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full w-full sm:w-auto" data-testid="button-hero-secondary">
-              <a href="mailto:enquiries@oendigitals.co.uk">
+              <a href={`mailto:${enquiryEmail}`}>
                 Email Me Today
               </a>
             </Button>
@@ -333,7 +333,7 @@ function Home() {
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full border-secondary-foreground/20 hover:bg-secondary-foreground hover:text-secondary w-full sm:w-auto" data-testid="button-footer-secondary">
-              <a href="mailto:enquiries@oendigitals.co.uk">
+              <a href={`mailto:${enquiryEmail}`}>
                 Email Me Today
               </a>
             </Button>
@@ -353,7 +353,7 @@ function Home() {
 function ContactForm() {
   return (
     <form
-      action={formspreeUrl}
+      action="https://formspree.io/f/mojbvbpg"
       method="POST"
       className="mx-auto grid max-w-2xl gap-4 rounded-lg border border-white/10 bg-background/90 p-5 text-left shadow-2xl shadow-primary/10 backdrop-blur sm:p-6"
       data-testid="form-contact"
