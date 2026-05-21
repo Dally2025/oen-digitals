@@ -24,6 +24,9 @@ const complaintsProcedureUrl =
 const websiteDesignSeoTitle = "Website Design Pembrokeshire | Oen Digitals";
 const websiteDesignMetaDescription =
   "Website design and digital support for small businesses in Pembrokeshire and Wales. Oen Digitals creates clear, modern websites with forms, SEO basics, branding support and practical AI tools.";
+const pricingSeoTitle = "Pricing | Oen Digitals – Web Design Pembrokeshire";
+const pricingMetaDescription =
+  "Transparent website design pricing for small businesses in Pembrokeshire and Wales. Starter sites from £150 with clear quotes and no hidden costs.";
 type PolicySection = {
   heading: string;
   paragraphs: string[];
@@ -534,6 +537,12 @@ function SiteFooter() {
       <p>&copy; {new Date().getFullYear()} Digital Empowerment Specialist. All rights reserved.</p>
       <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <a
+          href="/pricing"
+          className="inline-flex text-foreground/70 hover:text-primary transition-colors"
+        >
+          Pricing
+        </a>
+        <a
           href="/privacy-policy"
           className="inline-flex text-foreground/70 hover:text-primary transition-colors"
         >
@@ -639,6 +648,243 @@ function ComplaintsProcedure() {
       sections={complaintsProcedureSections}
       sourceUrl={complaintsProcedureUrl}
     />
+  );
+}
+
+function PricingPage() {
+  const packages = [
+    {
+      tag: "Starter",
+      name: "Simple Business Site",
+      description:
+        "A clean, mobile-friendly website for businesses getting online or needing a fresh start.",
+      price: "£150",
+      note: "One-off project fee",
+      mailto: "mailto:enquiries@oendigitals.co.uk?subject=Starter Site Enquiry",
+      features: [
+        "Up to 3 pages (home, about, contact)",
+        "Mobile-friendly responsive design",
+        "Basic contact form",
+        "SEO foundations built in",
+        "Handover guide included",
+      ],
+      featured: false,
+    },
+    {
+      tag: "Small business",
+      name: "Business Site with Booking or Payment",
+      description:
+        "A full website with integrated booking, enquiry or payment systems for growing businesses.",
+      price: "£350",
+      note: "One-off project fee",
+      mailto:
+        "mailto:enquiries@oendigitals.co.uk?subject=Small Business Site Enquiry",
+      features: [
+        "Up to 6 pages",
+        "Online booking or enquiry system",
+        "Payment setup (Stripe, PayPal or Square)",
+        "Google Business profile setup",
+        "SEO foundations and on-page structure",
+        "Branding support and layout direction",
+        "Mobile-first design",
+        "Handover guide and walkthrough",
+      ],
+      featured: true,
+    },
+    {
+      tag: "Creative & shop",
+      name: "Artist or Creative Website with Shop",
+      description:
+        "For artists and makers who need a portfolio, gallery and the ability to sell online.",
+      price: "£450",
+      note: "Up to £700 depending on scope",
+      mailto: "mailto:enquiries@oendigitals.co.uk?subject=Creative Site Enquiry",
+      features: [
+        "Portfolio or gallery layout",
+        "Online shop setup",
+        "Product pages and checkout",
+        "Commission or contact flow",
+        "Branding direction and visual consistency",
+        "SEO and Google setup",
+        "Handover guide and walkthrough",
+      ],
+      featured: false,
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "Do I get a fixed price before you start?",
+      answer:
+        "Yes. You receive a clear written quote before any work starts, and nothing begins until you approve it.",
+    },
+    {
+      question: "What if my project does not fit a package exactly?",
+      answer:
+        "These packages are a guide. Every project is quoted individually based on your specific requirements.",
+    },
+    {
+      question: "When do I pay?",
+      answer:
+        "Payment terms are agreed upfront. A deposit is typically taken before work begins, with the remainder due on completion.",
+    },
+    {
+      question: "Are there hidden costs?",
+      answer:
+        "No. Platform and domain costs are separate and paid directly to providers. All costs are explained before you commit.",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Seo title={pricingSeoTitle} description={pricingMetaDescription} />
+
+      <header className="border-b border-border/40 bg-background/95 px-6 py-5 md:px-12">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+          <a href="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="OEN Digitals Ltd"
+              className="h-12 w-auto rounded-sm object-contain"
+            />
+          </a>
+          <div className="flex items-center gap-3">
+            <Button asChild variant="outline" className="rounded-full">
+              <a href="/website-design-pembrokeshire">Services</a>
+            </Button>
+            <Button asChild className="rounded-full shadow-lg shadow-primary/20">
+              <a href="/#contact">Get in touch</a>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section className="px-6 pb-12 pt-16 text-center md:px-12 md:pt-24">
+          <div className="mx-auto max-w-3xl">
+            <span className="mb-5 inline-flex rounded-full border border-primary/20 bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+              Transparent pricing
+            </span>
+            <h1 className="mb-5 text-4xl font-bold leading-tight md:text-6xl">
+              Clear prices, <span className="text-primary italic">no surprises</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              Every project is quoted individually, but this page gives you a practical guide to typical website costs so you can plan with confidence.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
+              {[
+                "Written quote before any work begins",
+                "No hidden fees",
+                "You own everything",
+              ].map((item) => (
+                <span key={item} className="rounded-full border border-border bg-card px-4 py-2">
+                  ✓ {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 pb-8 md:px-12">
+          <div className="mx-auto max-w-6xl">
+            <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Website packages</p>
+            <div className="grid gap-6 md:grid-cols-3">
+              {packages.map((pkg) => (
+                <Card
+                  key={pkg.name}
+                  className={`h-full border-border/60 bg-card ${pkg.featured ? "border-primary/60 shadow-lg" : ""}`}
+                >
+                  <CardContent className="flex h-full flex-col p-0">
+                    {pkg.featured && (
+                      <div className="rounded-t-lg bg-primary px-4 py-2 text-center text-xs font-semibold uppercase tracking-wider text-primary-foreground">
+                        Most popular
+                      </div>
+                    )}
+                    <div className="space-y-2 p-6">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-primary">{pkg.tag}</p>
+                      <h2 className="text-2xl font-bold text-foreground">{pkg.name}</h2>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{pkg.description}</p>
+                    </div>
+                    <div className="border-y border-border/60 bg-muted/50 px-6 py-4">
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground">From</p>
+                      <p className="text-4xl font-bold text-foreground">{pkg.price}</p>
+                      <p className="text-xs text-muted-foreground">{pkg.note}</p>
+                    </div>
+                    <div className="flex-grow p-6">
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        {pkg.features.map((feature) => (
+                          <li key={feature} className="flex gap-2">
+                            <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="border-t border-border/60 p-6 pt-4">
+                      <Button asChild variant={pkg.featured ? "default" : "outline"} className="h-11 w-full rounded-full">
+                        <a href={pkg.mailto}>Get a quote</a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-8 md:px-12 md:py-12">
+          <div className="mx-auto max-w-6xl rounded-2xl border border-border/60 bg-secondary p-6 md:p-8">
+            <h2 className="mb-2 text-2xl font-bold text-secondary-foreground">Ongoing platform costs paid directly to providers</h2>
+            <p className="mb-5 text-sm leading-relaxed text-secondary-foreground/80">
+              These are separate from project fees and are standard costs of running a website. We explain exactly what you need before you commit.
+            </p>
+            <div className="grid gap-4 md:grid-cols-3">
+              <div className="rounded-lg border border-border/50 bg-card p-4">
+                <h3 className="font-semibold">Website platform</h3>
+                <p className="text-sm text-muted-foreground">Typically £10–£25 per month (Wix, Squarespace, Carrd and similar)</p>
+              </div>
+              <div className="rounded-lg border border-border/50 bg-card p-4">
+                <h3 className="font-semibold">Domain name</h3>
+                <p className="text-sm text-muted-foreground">Typically £10–£15 per year, renewed annually</p>
+              </div>
+              <div className="rounded-lg border border-border/50 bg-card p-4">
+                <h3 className="font-semibold">Payment processing</h3>
+                <p className="text-sm text-muted-foreground">Set by Stripe, PayPal or Square, usually a small percentage per transaction</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-12 md:px-12">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 text-center text-3xl font-bold">Pricing questions</h2>
+            <div className="space-y-3">
+              {faqs.map((faq) => (
+                <div key={faq.question} className="rounded-lg border border-border/60 bg-card p-5">
+                  <h3 className="mb-2 text-lg font-semibold">{faq.question}</h3>
+                  <p className="text-muted-foreground">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-secondary px-6 py-16 text-center text-secondary-foreground md:px-12">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-4 text-4xl font-bold">Not sure what you need?</h2>
+            <p className="mb-8 text-secondary-foreground/80">
+              Send a quick enquiry and get a simple recommendation with a clear quote you can understand.
+            </p>
+            <Button asChild size="lg" className="h-12 rounded-full px-8">
+              <a href="mailto:enquiries@oendigitals.co.uk">Email Oen Digitals</a>
+            </Button>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+      <CookieBanner />
+    </div>
   );
 }
 
@@ -1162,6 +1408,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/pricing" component={PricingPage} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/cookie" component={CookiePolicy} />
       <Route path="/terms-and-conditions" component={TermsAndConditions} />
