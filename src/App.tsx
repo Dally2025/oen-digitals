@@ -147,6 +147,10 @@ function Home() {
             <img
               src={logo}
               alt="OEN Digitals Ltd"
+              width={1536}
+              height={1024}
+              decoding="async"
+              fetchPriority="high"
               className="h-12 w-auto rounded-sm object-contain md:h-14"
             />
           </div>
@@ -298,6 +302,10 @@ function Home() {
             <img
               src={servicesImage}
               alt="Services overview"
+              width={1536}
+              height={1024}
+              loading="lazy"
+              decoding="async"
               className="block w-full rounded-2xl object-contain"
               data-testid="img-services"
             />
@@ -349,6 +357,10 @@ function Home() {
               <img
                 src={aboutImage}
                 alt="Digital Empowerment Specialist"
+                width={1424}
+                height={1104}
+                loading="lazy"
+                decoding="async"
                 className="block w-full h-full rounded-2xl object-contain group-hover:scale-[1.02] transition-transform duration-700"
                 data-testid="img-about"
               />
@@ -733,6 +745,9 @@ function HowItWorksPage() {
             <img
               src={logo}
               alt="OEN Digitals Ltd"
+              width={1536}
+              height={1024}
+              decoding="async"
               className="h-12 w-auto rounded-sm object-contain"
             />
           </a>
@@ -991,6 +1006,9 @@ function PricingPage() {
             <img
               src={logo}
               alt="OEN Digitals Ltd"
+              width={1536}
+              height={1024}
+              decoding="async"
               className="h-12 w-auto rounded-sm object-contain"
             />
           </a>
@@ -1148,6 +1166,9 @@ function WebsiteDesignPembrokeshire() {
             <img
               src={logo}
               alt="OEN Digitals Ltd"
+              width={1536}
+              height={1024}
+              decoding="async"
               className="h-12 w-auto rounded-sm object-contain"
             />
           </a>
@@ -1551,6 +1572,9 @@ function PolicyPage({
             <img
               src={logo}
               alt="OEN Digitals Ltd"
+              width={1536}
+              height={1024}
+              decoding="async"
               className="h-12 w-auto rounded-sm object-contain"
             />
           </a>
