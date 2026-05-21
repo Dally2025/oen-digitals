@@ -24,6 +24,99 @@ const complaintsProcedureUrl =
 const websiteDesignSeoTitle = "Website Design Pembrokeshire | Oen Digitals";
 const websiteDesignMetaDescription =
   "Website design and digital support for small businesses in Pembrokeshire and Wales. Oen Digitals creates clear, modern websites with forms, SEO basics, branding support and practical AI tools.";
+type PolicySection = {
+  heading: string;
+  paragraphs: string[];
+};
+
+const privacyPolicySections: PolicySection[] = [
+  {
+    heading: "Who we are",
+    paragraphs: [
+      "Oen Digitals provides website design, digital support and related business services. We are committed to protecting personal data and handling it in a fair, lawful and transparent way.",
+      "If you contact us through our website form, email or direct conversation, we may process personal information so we can respond to your enquiry and deliver requested services.",
+    ],
+  },
+  {
+    heading: "What data we collect",
+    paragraphs: [
+      "Depending on how you interact with the website, we may collect your name, email address, business details, enquiry information and any other information you choose to share.",
+      "We may also collect limited technical data such as browser type, device information and anonymised usage data to improve website performance and user experience.",
+    ],
+  },
+  {
+    heading: "How we use your data",
+    paragraphs: [
+      "We use personal data to respond to enquiries, provide quotes, deliver services, maintain communication and improve our digital services.",
+      "We do not sell personal data to third parties. Data is only shared with trusted service providers where needed to operate the website or deliver agreed services.",
+    ],
+  },
+  {
+    heading: "Your rights",
+    paragraphs: [
+      "You can request access, correction or deletion of your personal data, and you may object to or restrict certain processing where applicable.",
+      "To make a request, contact us at enquiries@oendigitals.co.uk and we will respond within a reasonable timeframe in line with UK data protection requirements.",
+    ],
+  },
+];
+
+const cookiePolicySections: PolicySection[] = [
+  {
+    heading: "How cookies are used",
+    paragraphs: [
+      "This website uses essential cookies to support core functionality, including basic site operation and remembering cookie consent preferences.",
+      "Where analytics or optional cookies are used in future, we will update this policy so visitors can clearly understand what is collected and why.",
+    ],
+  },
+  {
+    heading: "Managing cookies",
+    paragraphs: [
+      "Most browsers allow you to control and delete cookies through settings. Disabling some cookies may affect parts of the website experience.",
+      "By continuing to use this website after accepting the cookie notice, you consent to the use of essential cookies required for operation.",
+    ],
+  },
+];
+
+const termsAndConditionsSections: PolicySection[] = [
+  {
+    heading: "Service scope",
+    paragraphs: [
+      "Oen Digitals provides digital services including website design, content support, guidance and related consultancy for small businesses.",
+      "Each project is delivered according to agreed scope, timeline and payment terms confirmed in writing before work begins.",
+    ],
+  },
+  {
+    heading: "Payments and delivery",
+    paragraphs: [
+      "Quotes and invoices outline payment milestones. Work may begin after an agreed deposit is received, with final handover on completion of agreed payment terms.",
+      "Delivery dates are estimates and may vary depending on feedback timings, content supply and third-party dependencies.",
+    ],
+  },
+  {
+    heading: "Client responsibilities",
+    paragraphs: [
+      "Clients are responsible for providing accurate content, assets and approvals required to complete a project.",
+      "Clients should ensure they hold rights to any text, imagery or materials supplied for use in websites or digital outputs.",
+    ],
+  },
+];
+
+const complaintsProcedureSections: PolicySection[] = [
+  {
+    heading: "How to raise a complaint",
+    paragraphs: [
+      "If you are unhappy with any part of our service, please contact us with details of the issue, including relevant dates and project context.",
+      "Complaints can be sent by email to enquiries@oendigitals.co.uk. We aim to acknowledge complaints promptly and work toward a fair resolution.",
+    ],
+  },
+  {
+    heading: "Resolution process",
+    paragraphs: [
+      "We review each complaint carefully, gather relevant information and provide a written response with proposed next steps.",
+      "Where appropriate, we may offer corrective actions, clarification or a practical service adjustment to resolve concerns.",
+    ],
+  },
+];
 
 const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
   e.preventDefault();
@@ -506,27 +599,45 @@ function CookieBanner() {
 }
 
 function PrivacyPolicy() {
-  return <DocumentPage title="OEN Digitals Privacy Policy" documentUrl={privacyPolicyUrl} />;
+  return (
+    <PolicyPage
+      title="OEN Digitals Privacy Policy"
+      description="Read how Oen Digitals collects, uses and protects personal information for website enquiries and service delivery."
+      sections={privacyPolicySections}
+      sourceUrl={privacyPolicyUrl}
+    />
+  );
 }
 
 function CookiePolicy() {
-  return <DocumentPage title="OEN Digitals Cookie Policy" documentUrl={cookiePolicyUrl} />;
+  return (
+    <PolicyPage
+      title="OEN Digitals Cookie Policy"
+      description="Learn how cookies are used on the Oen Digitals website and how to control cookie settings in your browser."
+      sections={cookiePolicySections}
+      sourceUrl={cookiePolicyUrl}
+    />
+  );
 }
 
 function TermsAndConditions() {
   return (
-    <DocumentPage
+    <PolicyPage
       title="OEN Digitals Terms and Conditions"
-      documentUrl={termsAndConditionsUrl}
+      description="Key terms covering project scope, delivery, payments and responsibilities when working with Oen Digitals."
+      sections={termsAndConditionsSections}
+      sourceUrl={termsAndConditionsUrl}
     />
   );
 }
 
 function ComplaintsProcedure() {
   return (
-    <DocumentPage
+    <PolicyPage
       title="OEN Digitals Complaints Procedure"
-      documentUrl={complaintsProcedureUrl}
+      description="Understand the steps for raising a complaint and how Oen Digitals handles and resolves service concerns."
+      sections={complaintsProcedureSections}
+      sourceUrl={complaintsProcedureUrl}
     />
   );
 }
@@ -927,9 +1038,21 @@ function WebsiteDesignPembrokeshire() {
   );
 }
 
-function DocumentPage({ title, documentUrl }: { title: string; documentUrl: string }) {
+function PolicyPage({
+  title,
+  description,
+  sections,
+  sourceUrl,
+}: {
+  title: string;
+  description: string;
+  sections: PolicySection[];
+  sourceUrl: string;
+}) {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Seo title={title} description={description} />
+
       <header className="border-b border-border/40 bg-background/95 px-6 py-5 md:px-12">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <a href="/" className="flex items-center">
@@ -946,14 +1069,36 @@ function DocumentPage({ title, documentUrl }: { title: string; documentUrl: stri
       </header>
 
       <main className="px-4 py-8 md:px-8">
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-lg border border-border bg-white shadow-2xl">
-          <iframe
-            src={documentUrl}
-            title={title}
-            className="h-[80vh] w-full bg-white"
-          />
+        <div className="mx-auto max-w-4xl rounded-xl border border-border bg-card p-6 shadow-sm md:p-10">
+          <h1 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">{title}</h1>
+          <p className="mb-8 leading-relaxed text-muted-foreground">{description}</p>
+
+          <div className="space-y-8">
+            {sections.map((section) => (
+              <section key={section.heading}>
+                <h2 className="mb-3 text-2xl font-semibold text-foreground">{section.heading}</h2>
+                <div className="space-y-3 text-muted-foreground">
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph} className="leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+
+          <p className="mt-10 text-sm text-muted-foreground">
+            Full published document: {" "}
+            <a href={sourceUrl} target="_blank" rel="noreferrer" className="text-primary hover:underline">
+              view source document
+            </a>
+            .
+          </p>
         </div>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }
