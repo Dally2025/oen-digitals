@@ -27,6 +27,9 @@ const websiteDesignMetaDescription =
 const pricingSeoTitle = "Pricing | Oen Digitals – Web Design Pembrokeshire";
 const pricingMetaDescription =
   "Transparent website design pricing for small businesses in Pembrokeshire and Wales. Starter sites from £150 with clear quotes and no hidden costs.";
+const howItWorksSeoTitle = "How It Works | Oen Digitals – Web Design Pembrokeshire";
+const howItWorksMetaDescription =
+  "From first conversation to handover, see exactly how Oen Digitals works with businesses in Pembrokeshire and Wales to build practical websites.";
 type PolicySection = {
   heading: string;
   paragraphs: string[];
@@ -537,6 +540,12 @@ function SiteFooter() {
       <p>&copy; {new Date().getFullYear()} Digital Empowerment Specialist. All rights reserved.</p>
       <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <a
+          href="/how-it-works"
+          className="inline-flex text-foreground/70 hover:text-primary transition-colors"
+        >
+          How It Works
+        </a>
+        <a
           href="/pricing"
           className="inline-flex text-foreground/70 hover:text-primary transition-colors"
         >
@@ -648,6 +657,243 @@ function ComplaintsProcedure() {
       sections={complaintsProcedureSections}
       sourceUrl={complaintsProcedureUrl}
     />
+  );
+}
+
+function HowItWorksPage() {
+  const stages = [
+    {
+      number: "1",
+      tag: "Stage one",
+      title: "First Conversation",
+      intro:
+        "We start with a relaxed chat by email, phone or in person about what your business actually needs.",
+      bullets: [
+        "Simple questions about your goals and what you already have",
+        "No jargon and no pressure",
+        "Clear written recommendation, cost and timeline",
+        "Nothing starts until you are happy",
+      ],
+      note:
+        "You do not need everything ready before we speak. We can work with what you have and help fill in the gaps.",
+    },
+    {
+      number: "2",
+      tag: "Stage two",
+      title: "We Get to Work",
+      intro:
+        "Once approved, the build begins with practical milestone updates and clear progress.",
+      bullets: [
+        "Domain and platform setup where needed",
+        "Design aligned to your brand and style",
+        "Content written or structured for clarity",
+        "Booking, payment or contact systems configured",
+        "Mobile, tablet and desktop testing",
+      ],
+      note: "",
+    },
+    {
+      number: "3",
+      tag: "Stage three",
+      title: "Review and Approval",
+      intro:
+        "You review everything before launch and request changes until it feels exactly right.",
+      bullets: [
+        "Full walkthrough before go-live",
+        "Prompt revisions with clear communication",
+        "No launch without your sign-off",
+      ],
+      note:
+        "If something does not feel right, we adjust it. The goal is a result you are genuinely happy with.",
+    },
+    {
+      number: "4",
+      tag: "Stage four",
+      title: "Handover",
+      intro:
+        "After approval, everything is handed over securely so your website stays fully in your control.",
+      bullets: [
+        "Walkthrough on how to manage updates",
+        "Written guide for future reference",
+        "Ownership of accounts, content and domain",
+        "Secure transfer of login details",
+        "Optional ongoing support when needed",
+      ],
+      note: "",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Seo title={howItWorksSeoTitle} description={howItWorksMetaDescription} />
+
+      <header className="border-b border-border/40 bg-background/95 px-6 py-5 md:px-12">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
+          <a href="/" className="flex items-center">
+            <img
+              src={logo}
+              alt="OEN Digitals Ltd"
+              className="h-12 w-auto rounded-sm object-contain"
+            />
+          </a>
+          <div className="flex items-center gap-3">
+            <Button asChild variant="outline" className="rounded-full">
+              <a href="/website-design-pembrokeshire">Services</a>
+            </Button>
+            <Button asChild variant="outline" className="rounded-full">
+              <a href="/pricing">Pricing</a>
+            </Button>
+            <Button asChild className="rounded-full shadow-lg shadow-primary/20">
+              <a href="/#contact">Get in touch</a>
+            </Button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section className="px-6 pb-12 pt-16 text-center md:px-12 md:pt-24">
+          <div className="mx-auto max-w-3xl">
+            <span className="mb-5 inline-flex rounded-full border border-primary/20 bg-accent px-4 py-1 text-xs font-semibold uppercase tracking-wider text-accent-foreground">
+              The process
+            </span>
+            <h1 className="mb-5 text-4xl font-bold leading-tight md:text-6xl">
+              Simple from start to <span className="text-primary italic">handover</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+              No jargon, no unnecessary meetings and no surprises. This is exactly what working with Oen Digitals looks like from first conversation to launch.
+            </p>
+            <p className="mx-auto mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm text-muted-foreground">
+              <MapPin className="h-4 w-4 text-primary" /> Based in Haverfordwest, supporting businesses across Wales and beyond
+            </p>
+          </div>
+        </section>
+
+        <section className="px-6 pb-16 md:px-12">
+          <div className="mx-auto max-w-4xl">
+            <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Four clear stages</p>
+            <div className="space-y-6">
+              {stages.map((stage) => (
+                <Card key={stage.number} className="border-border/60 bg-card">
+                  <CardContent className="p-6 md:p-8">
+                    <div className="mb-3 flex items-center gap-3">
+                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+                        {stage.number}
+                      </span>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-primary">{stage.tag}</p>
+                    </div>
+                    <h2 className="mb-3 text-3xl font-bold text-foreground">{stage.title}</h2>
+                    <p className="mb-4 text-muted-foreground">{stage.intro}</p>
+                    <ul className="space-y-2 text-sm text-muted-foreground">
+                      {stage.bullets.map((bullet) => (
+                        <li key={bullet} className="flex gap-2">
+                          <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {stage.note ? (
+                      <div className="mt-5 rounded-md border-l-4 border-primary bg-secondary/40 p-4 text-sm text-muted-foreground">
+                        <strong className="text-foreground">Good to know:</strong> {stage.note}
+                      </div>
+                    ) : null}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-secondary px-6 py-16 text-secondary-foreground md:px-12">
+          <div className="mx-auto max-w-5xl">
+            <h2 className="mb-4 text-center text-4xl font-bold">What we need from you</h2>
+            <p className="mx-auto mb-8 max-w-3xl text-center text-secondary-foreground/80">
+              A few basics help us get moving quickly, but if you are missing something we can guide you through it.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  title: "Logos and branding",
+                  description: "Any existing logos, colours or visual style you already use.",
+                },
+                {
+                  title: "Style direction",
+                  description: "A rough idea of the look you want or examples you like.",
+                },
+                {
+                  title: "Business details",
+                  description: "Name, contact details, services and opening hours.",
+                },
+                {
+                  title: "Content",
+                  description: "Any text and images you want included, with guidance if needed.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="rounded-lg border border-border/50 bg-card p-4">
+                  <h3 className="mb-2 font-semibold text-foreground">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-14 md:px-12 md:py-16">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="mb-3 text-3xl font-bold">How we communicate</h2>
+            <p className="mx-auto mb-8 max-w-2xl text-muted-foreground">
+              Simple and manageable for both sides with milestone-based updates and practical support.
+            </p>
+            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  title: "Main channel",
+                  description: "Email-first communication so everything stays clear and documented.",
+                },
+                {
+                  title: "Updates",
+                  description: "You hear from us at key points, not constantly.",
+                },
+                {
+                  title: "Meetings",
+                  description: "Available when useful, never forced.",
+                },
+                {
+                  title: "After launch",
+                  description: "Support remains available as your business grows.",
+                },
+              ].map((item) => (
+                <Card key={item.title} className="border-border/60 bg-card text-left">
+                  <CardContent className="p-5">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-primary">{item.title}</p>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-muted px-6 py-16 text-center md:px-12">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-4 text-4xl font-bold">Ready to get started?</h2>
+            <p className="mb-8 text-muted-foreground">
+              Ask questions or share your project idea and get a clear next-step recommendation.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <Button asChild size="lg" className="h-12 rounded-full px-8">
+                <a href="mailto:enquiries@oendigitals.co.uk">Email Oen Digitals</a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="h-12 rounded-full px-8">
+                <a href="/pricing">See pricing</a>
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+      <CookieBanner />
+    </div>
   );
 }
 
@@ -1408,6 +1654,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/how-it-works" component={HowItWorksPage} />
       <Route path="/pricing" component={PricingPage} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/cookie" component={CookiePolicy} />
