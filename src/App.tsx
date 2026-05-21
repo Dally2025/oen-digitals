@@ -131,7 +131,7 @@ function Home() {
           {[...Array(3)].map((_, i) => (
             <div key={i} className="flex items-center shrink-0">
               {[
-                "OEN Digitals Ltd",
+                "OEN Digitals",
                 "Digital Strategy",
                 "Web Development",
                 "Digital Literacy Coaching",
@@ -204,7 +204,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ServiceCard 
               icon={<Compass className="h-8 w-8 text-primary" />}
-              title="Digital Strategy & Roadmap"
+              title="Digital Strategy & Road Map"
               description="Clear objectives and direction before building anything. We map out exactly what you need and, more importantly, what you don't."
               delay={0.1}
             />
@@ -299,7 +299,7 @@ function Home() {
             <ProcessStep 
               number="02"
               title="Strategy"
-              description="A simple, step-by-step roadmap tailored to your pace. No overwhelming overhauls."
+              description="A simple, step-by-step road map tailored to your pace. No overwhelming overhauls."
               delay={0.3}
             />
             <ProcessStep 

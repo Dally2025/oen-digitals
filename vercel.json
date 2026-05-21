@@ -1,5 +1,6 @@
 {
-  "installCommand": "corepack prepare pnpm@10.12.4 --activate && pnpm install",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build",
   "rewrites": [
     {
       "source": "/(.*)",
