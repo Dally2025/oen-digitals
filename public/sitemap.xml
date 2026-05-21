@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://oendigitals.co.uk/</loc>
+    <loc>https://www.oendigitals.co.uk/</loc>
   </url>
   <url>
-    <loc>https://oendigitals.co.uk/services</loc>
+    <loc>https://www.oendigitals.co.uk/website-design-pembrokeshire</loc>
   </url>
   <url>
-    <loc>https://oendigitals.co.uk/contact</loc>
+    <loc>https://www.oendigitals.co.uk/privacy-policy</loc>
+  </url>
+  <url>
+    <loc>https://www.oendigitals.co.uk/cookie</loc>
+  </url>
+  <url>
+    <loc>https://www.oendigitals.co.uk/terms-and-conditions</loc>
+  </url>
+  <url>
+    <loc>https://www.oendigitals.co.uk/complaints-procedure</loc>
   </url>
 </urlset>
