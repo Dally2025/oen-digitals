@@ -74,6 +74,9 @@ function Home() {
           className="max-w-4xl mx-auto"
           data-testid="section-hero"
         >
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] text-foreground">
+            Web Design & Digital Support for Small Businesses in <span className="text-primary">Wales</span> and <span className="text-primary">Pembrokeshire</span>
+          </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-medium">
             I provide web design, booking systems, and digital support for small businesses across <strong>Wales</strong>{" "}
             {"and "}<strong>Pembrokeshire</strong>. I help you build simple, effective websites and tools that actually work for your day-to-day business.
@@ -85,9 +88,9 @@ function Home() {
             </span>
             Digital Empowerment Specialist
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] text-foreground">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-[1.1] text-foreground">
             Technology that works for you, <span className="text-primary italic">not against you.</span>
-          </h1>
+          </h2>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-2xl mx-auto font-light">
             Empowered, not just connected. Stop guessing and start knowing.
@@ -181,7 +184,8 @@ function Home() {
         <div className="max-w-6xl mx-auto" data-testid="section-services">
           <div className="mb-16 md:w-2/3">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">Core Services</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground">Clarity over complexity.</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground">Website Design, Digital Coaching & SEO Support</h3>
+            <p className="text-lg text-muted-foreground mt-4 max-w-2xl">I offer comprehensive web design and digital services tailored to small businesses. From building responsive websites to providing personalized digital literacy coaching, I ensure your online presence supports your business goals with clarity and purpose.</p>
           </div>
 
           {/* Services hero image */}
@@ -233,6 +237,7 @@ function Home() {
       {/* About Section */}
       <section id="about" className="py-24 px-6 md:px-12 bg-muted/50 border-y border-border/50">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12" data-testid="section-about">
+          <h2 className="sr-only">About Oen Digitals</h2>
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -258,7 +263,7 @@ function Home() {
             transition={{ duration: 0.6 }}
             className="md:w-1/2"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">A Trusted Human Guide</h2>
+            <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">A Trusted Human Guide</h3>
             <div className="prose prose-lg text-muted-foreground prose-p:leading-relaxed">
               <p className="text-xl text-foreground font-medium mb-6">
                 "I'm not here to lecture you on technical specs."
@@ -284,7 +289,8 @@ function Home() {
         <div className="max-w-6xl mx-auto" data-testid="section-process">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">How We Work</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground">The Path to Autonomy</h3>
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground">Our Three-Step Process: Clarity, Strategy, Autonomy</h3>
+            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">We guide you through a simple journey from identifying your digital challenges to building confidence and independence in managing your own online presence.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
