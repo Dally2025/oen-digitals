@@ -146,7 +146,7 @@ function Home() {
           <div className="flex items-center">
             <img
               src={logo}
-              alt="OEN Digitals Ltd"
+              alt="OEN Digitals"
               width={1536}
               height={1024}
               decoding="async"
@@ -249,7 +249,7 @@ function Home() {
                 "Tech Empowerment",
                 "Online Presence",
                 "Digital Confidence",
-                "OEN Digitals Ltd",
+                "OEN Digitals",
                 "SEND-Friendly Web Apps",
                 "Workflow Automation",
                 "Digital Clarity",
@@ -744,7 +744,7 @@ function HowItWorksPage() {
           <a href="/" className="flex items-center">
             <img
               src={logo}
-              alt="OEN Digitals Ltd"
+              alt="OEN Digitals"
               width={1536}
               height={1024}
               decoding="async"
@@ -1005,7 +1005,7 @@ function PricingPage() {
           <a href="/" className="flex items-center">
             <img
               src={logo}
-              alt="OEN Digitals Ltd"
+              alt="OEN Digitals"
               width={1536}
               height={1024}
               decoding="async"
@@ -1165,7 +1165,7 @@ function WebsiteDesignPembrokeshire() {
           <a href="/" className="flex items-center">
             <img
               src={logo}
-              alt="OEN Digitals Ltd"
+              alt="OEN Digitals"
               width={1536}
               height={1024}
               decoding="async"
@@ -1571,7 +1571,7 @@ function PolicyPage({
           <a href="/" className="flex items-center">
             <img
               src={logo}
-              alt="OEN Digitals Ltd"
+              alt="OEN Digitals"
               width={1536}
               height={1024}
               decoding="async"
