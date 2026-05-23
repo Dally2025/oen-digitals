@@ -253,11 +253,25 @@ function Home() {
                 "SEND-Friendly Web Apps",
                 "Workflow Automation",
                 "Digital Clarity",
+                "View Services",
               ].map((word, j) => (
-                <span key={j} className="inline-flex items-center gap-4 px-6 text-sm font-semibold uppercase tracking-widest">
-                  <span className="text-primary">{word}</span>
-                  <span className="text-primary/30 text-lg">✦</span>
-                </span>
+                word === "View Services" ? (
+                  <a
+                    key={j}
+                    href="#services"
+                    onClick={smoothScroll}
+                    className="inline-flex items-center gap-4 px-6 text-sm font-semibold uppercase tracking-widest transition-colors hover:text-primary"
+                    data-testid="ticker-link-services"
+                  >
+                    <span className="text-primary">{word}</span>
+                    <span className="text-primary/30 text-lg">✦</span>
+                  </a>
+                ) : (
+                  <span key={j} className="inline-flex items-center gap-4 px-6 text-sm font-semibold uppercase tracking-widest">
+                    <span className="text-primary">{word}</span>
+                    <span className="text-primary/30 text-lg">✦</span>
+                  </span>
+                )
               ))}
             </div>
           ))}

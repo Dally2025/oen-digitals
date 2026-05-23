@@ -284,6 +284,6 @@
 }
 
 .animate-ticker {
-  animation: ticker 30s linear infinite;
+  animation: ticker 22s linear infinite;
   will-change: transform;
 }
