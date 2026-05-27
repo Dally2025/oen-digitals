@@ -181,8 +181,8 @@ function Home() {
             Web Design & Digital Support for Small Businesses in <span className="text-primary">Wales</span> and <span className="text-primary">Pembrokeshire</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-medium">
-            I provide web design, booking systems, and digital support for small businesses across <strong>Wales</strong>{" "}
-            {"and "}<strong>Pembrokeshire</strong>. I help you build simple, effective websites and tools that actually work for your day-to-day business.
+            Get web design, booking systems, and practical digital support tailored for small businesses across <strong>Wales</strong>{" "}
+            {"and "}<strong>Pembrokeshire</strong>. Build a clearer online presence with tools that work in your day-to-day business.
           </p>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold uppercase tracking-wider mb-6 border border-primary/20">
             <span className="relative flex h-2 w-2">
@@ -220,7 +220,7 @@ function Home() {
             </Button>
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full w-full sm:w-auto" data-testid="button-hero-secondary">
               <a href={`mailto:${enquiryEmail}`}>
-                Email Me Today
+                Email Oen Digitals
               </a>
             </Button>
           </div>
@@ -290,9 +290,25 @@ function Home() {
             data-testid="section-social-proof"
           >
             <p className="text-xl md:text-3xl font-serif max-w-4xl mx-auto leading-relaxed">
-              "I've helped clients save up to <span className="text-primary font-bold">6 hours a week</span> by simplifying their daily digital workflows."
+              "Clients have saved up to <span className="text-primary font-bold">6 hours a week</span> by simplifying daily digital workflows."
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Case Snapshot */}
+      <section id="case-snapshot" className="py-12 px-6 md:px-12 bg-background">
+        <div className="max-w-5xl mx-auto" data-testid="section-case-snapshot">
+          <div className="rounded-2xl border border-border/60 bg-card p-6 md:p-8 shadow-sm">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Case Snapshot</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Same tools. Better result.</h2>
+            <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+              An independent healthcare practice in Pembrokeshire already had a Carrd subscription and a domain, but the website was a basic two-column layout with a contact form and did not reflect what the practice actually offered.
+            </p>
+            <p className="text-muted-foreground leading-relaxed text-base md:text-lg mt-4">
+              Without extra platform cost, the same subscription was rebuilt into a clearer, more professional site that represented the service properly and made it easier for patients to understand and enquire.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -302,7 +318,7 @@ function Home() {
           <div className="mb-16 md:w-2/3">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">Core Services</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-foreground">Website Design, Digital Coaching & SEO Support</h3>
-            <p className="text-lg text-muted-foreground mt-4 max-w-2xl">I offer comprehensive web design and digital services tailored to small businesses. From building responsive websites to providing personalized digital literacy coaching, I ensure your online presence supports your business goals with clarity and purpose.</p>
+            <p className="text-lg text-muted-foreground mt-4 max-w-2xl">Get practical web design and digital support tailored to your business. From responsive websites to digital confidence coaching, each service is built to help your business communicate clearly and convert more of the right enquiries.</p>
           </div>
 
           {/* Services hero image */}
@@ -391,13 +407,13 @@ function Home() {
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">A Trusted Human Guide</h3>
             <div className="prose prose-lg text-muted-foreground prose-p:leading-relaxed">
               <p className="text-xl text-foreground font-medium mb-6">
-                "I'm not here to lecture you on technical specs."
+                "No technical lectures. Just practical support."
               </p>
               <p>
-                "I'm here to be your teacher and partner — creating a two-way conversation that helps you move from digitally timid to digitally dominant."
+                "You get a clear partner who translates digital complexity into simple next steps your business can actually use."
               </p>
               <p>
-                Technology should amplify your work, not act as a barrier. Together, we'll demystify your digital environment, streamline your tools, and build a setup you actually enjoy using.
+                Technology should amplify your work, not create friction. Your setup is streamlined around clarity, confidence, and results you can maintain long term.
               </p>
             </div>
             
@@ -457,7 +473,7 @@ function Home() {
         >
           <h2 className="text-4xl md:text-6xl font-bold mb-6">Ready to take control?</h2>
           <p className="text-xl text-secondary-foreground/70 mb-8 max-w-xl mx-auto">
-            Send an enquiry below and I will get back to you as soon as possible.
+            Send an enquiry below and you will get a clear next-step response as soon as possible.
           </p>
           
           <ContactForm />
@@ -465,7 +481,7 @@ function Home() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full border-secondary-foreground/20 hover:bg-secondary-foreground hover:text-secondary w-full sm:w-auto" data-testid="button-footer-secondary">
               <a href={`mailto:${enquiryEmail}`}>
-                Email Me Today
+                Email Oen Digitals
               </a>
             </Button>
           </div>
@@ -1230,7 +1246,7 @@ function WebsiteDesignPembrokeshire() {
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild className="h-14 rounded-full px-8">
-                <a href="mailto:enquiries@oendigitals.co.uk">Email Me Today</a>
+                <a href="mailto:enquiries@oendigitals.co.uk">Email Oen Digitals</a>
               </Button>
             </div>
           </div>
