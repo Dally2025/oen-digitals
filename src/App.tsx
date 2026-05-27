@@ -26,7 +26,7 @@ const websiteDesignMetaDescription =
   "Website design and digital support for small businesses in Pembrokeshire and Wales. Oen Digitals creates clear, modern websites with forms, SEO basics, branding support and practical AI tools.";
 const pricingSeoTitle = "Pricing | Oen Digitals – Web Design Pembrokeshire";
 const pricingMetaDescription =
-  "Transparent website design pricing for small businesses in Pembrokeshire and Wales. Starter sites from £150 with clear quotes and no hidden costs.";
+  "Transparent website design and AI workflow consulting pricing for small businesses in Pembrokeshire and Wales. DIY lessons from £150 with clear quotes and no hidden costs.";
 const howItWorksSeoTitle = "How It Works | Oen Digitals – Web Design Pembrokeshire";
 const howItWorksMetaDescription =
   "From first conversation to handover, see exactly how Oen Digitals works with businesses in Pembrokeshire and Wales to build practical websites.";
@@ -243,6 +243,7 @@ function Home() {
                 "Accessibility Audits",
                 "Workflow Automation",
                 "SEND-Friendly Tools",
+                "AI Workflow Consulting",
                 "Digital Strategy",
                 "Online Presence",
                 "Digital Confidence",
@@ -342,8 +343,8 @@ function Home() {
             />
             <ServiceCard 
               icon={<Shield className="h-8 w-8 text-primary" />}
-              title="Digital Literacy Coaching"
-              description="One-to-one sessions so you actually understand what you&apos;ve got and how to use it. You&apos;ll never need to call someone just to change a word on your own website again."
+              title="AI Workflow Consulting"
+              description="One-to-one sessions so you can use AI and your digital tools properly. You&apos;ll understand what it&apos;s doing, where it helps, and how to make it save time."
               delay={0.3}
             />
             <ServiceCard 
@@ -937,58 +938,52 @@ function HowItWorksPage() {
 function PricingPage() {
   const packages = [
     {
-      tag: "Starter",
-      name: "Simple Business Site",
+      tag: "DIY lesson",
+      name: "DIY Lesson",
       description:
-        "A clean, mobile-friendly website for businesses getting online or needing a fresh start.",
+        "A focused lesson to help you understand your site, your tools and what to do next.",
       price: "£150",
-      note: "One-off project fee",
-      mailto: "mailto:enquiries@oendigitals.co.uk?subject=Starter Site Enquiry",
+      note: "One-off lesson fee",
+      mailto: "mailto:enquiries@oendigitals.co.uk?subject=DIY%20Lesson%20Enquiry",
       features: [
-        "Up to 3 pages (home, about, contact)",
-        "Mobile-friendly responsive design",
-        "Basic contact form",
-        "SEO foundations built in",
-        "Handover guide included",
+        "One-to-one teaching session",
+        "Clear guidance on your current website or setup",
+        "Practical next steps you can implement yourself",
+        "No jargon, no overwhelm",
       ],
       featured: false,
     },
     {
-      tag: "Small business",
-      name: "Business Site with Booking or Payment",
+      tag: "Full setup",
+      name: "Full Setup",
       description:
-        "A full website with integrated booking, enquiry or payment systems for growing businesses.",
-      price: "£350",
+        "A complete website build with the right structure, content and tools in place from day one.",
+      price: "£650–£900",
       note: "One-off project fee",
       mailto:
-        "mailto:enquiries@oendigitals.co.uk?subject=Small Business Site Enquiry",
+        "mailto:enquiries@oendigitals.co.uk?subject=Full%20Setup%20Enquiry",
       features: [
-        "Up to 6 pages",
-        "Online booking or enquiry system",
-        "Payment setup (Stripe, PayPal or Square)",
-        "Google Business profile setup",
-        "SEO foundations and on-page structure",
-        "Branding support and layout direction",
-        "Mobile-first design",
+        "Website build and structure",
+        "Booking, enquiry or contact systems",
+        "SEO foundations and on-page setup",
+        "Branding direction and layout support",
         "Handover guide and walkthrough",
       ],
       featured: true,
     },
     {
-      tag: "Creative & shop",
-      name: "Artist or Creative Website with Shop",
+      tag: "Growth & ecommerce",
+      name: "Growth & Ecommerce",
       description:
-        "For artists and makers who need a portfolio, gallery and the ability to sell online.",
-      price: "£450",
-      note: "Up to £700 depending on scope",
-      mailto: "mailto:enquiries@oendigitals.co.uk?subject=Creative Site Enquiry",
+        "For businesses ready to grow with ecommerce, stronger conversion and more advanced digital support.",
+      price: "£1,500–£3,000",
+      note: "Quoted to scope",
+      mailto: "mailto:enquiries@oendigitals.co.uk?subject=Growth%20and%20Ecommerce%20Enquiry",
       features: [
-        "Portfolio or gallery layout",
-        "Online shop setup",
-        "Product pages and checkout",
-        "Commission or contact flow",
+        "Ecommerce setup and product flow",
+        "Conversion-focused structure",
+        "Advanced SEO and setup support",
         "Branding direction and visual consistency",
-        "SEO and Google setup",
         "Handover guide and walkthrough",
       ],
       featured: false,
@@ -1055,7 +1050,7 @@ function PricingPage() {
               Clear prices, <span className="text-primary italic">no surprises</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-              Every project is quoted individually, but this page gives you a practical guide to typical website costs so you can plan with confidence.
+              Every project is quoted individually, but this page gives you a practical guide to teaching, setup and growth costs so you can plan with confidence.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-muted-foreground">
               {[
@@ -1074,6 +1069,7 @@ function PricingPage() {
         <section className="px-6 pb-8 md:px-12">
           <div className="mx-auto max-w-6xl">
             <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">Website packages</p>
+            <p className="mb-8 text-center text-sm text-muted-foreground">Prices are now set around the right level of support for where your business is at.</p>
             <div className="grid gap-6 md:grid-cols-3">
               {packages.map((pkg) => (
                 <Card
