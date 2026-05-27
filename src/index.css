@@ -75,55 +75,54 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  /* Deep near-black with a subtle purple undertone — matches image backgrounds */
-  --background: 270 22% 6%;
-  --foreground: 260 30% 95%;
+  /* Coastal palette: harbour slate base, deep tide highlights, linen sand support */
+  --background: 198 20% 16%;
+  --foreground: 42 28% 94%;
 
-  --border: 270 20% 18%;
+  --border: 198 16% 28%;
 
-  --card: 270 22% 9%;
-  --card-foreground: 260 30% 95%;
-  --card-border: 270 20% 18%;
+  --card: 198 22% 20%;
+  --card-foreground: 42 28% 94%;
+  --card-border: 198 16% 28%;
 
-  --sidebar: 270 22% 9%;
-  --sidebar-foreground: 260 30% 95%;
-  --sidebar-border: 270 20% 18%;
-  --sidebar-primary: 320 90% 62%;
+  --sidebar: 198 22% 20%;
+  --sidebar-foreground: 42 28% 94%;
+  --sidebar-border: 198 16% 28%;
+  --sidebar-primary: 194 52% 33%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 270 20% 14%;
-  --sidebar-accent-foreground: 260 30% 95%;
-  --sidebar-ring: 320 90% 62%;
+  --sidebar-accent: 198 16% 24%;
+  --sidebar-accent-foreground: 42 28% 94%;
+  --sidebar-ring: 194 52% 33%;
 
-  --popover: 270 22% 9%;
-  --popover-foreground: 260 30% 95%;
-  --popover-border: 270 20% 18%;
+  --popover: 198 22% 20%;
+  --popover-foreground: 42 28% 94%;
+  --popover-border: 198 16% 28%;
 
-  /* Hot pink / magenta — the neon sign colour from the images */
-  --primary: 320 90% 62%;
+  /* Deep tide accent */
+  --primary: 194 52% 33%;
   --primary-foreground: 0 0% 100%;
 
-  /* Dark charcoal-purple for section contrast */
-  --secondary: 270 25% 12%;
-  --secondary-foreground: 260 30% 95%;
+  /* Linen sand support surface */
+  --secondary: 42 42% 88%;
+  --secondary-foreground: 198 24% 22%;
 
-  --muted: 270 20% 13%;
-  --muted-foreground: 270 10% 56%;
+  --muted: 198 16% 24%;
+  --muted-foreground: 42 14% 74%;
 
-  /* Deep dark pink for subtle accent surfaces */
-  --accent: 320 55% 18%;
-  --accent-foreground: 320 90% 82%;
+  --accent: 198 18% 27%;
+  --accent-foreground: 42 28% 94%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --input: 270 20% 18%;
-  --ring: 320 90% 62%;
+  --input: 198 16% 28%;
+  --ring: 194 52% 33%;
 
-  --chart-1: 320 90% 62%;
-  --chart-2: 270 60% 70%;
-  --chart-3: 320 50% 40%;
-  --chart-4: 270 10% 56%;
-  --chart-5: 270 20% 20%;
+  --chart-1: 194 52% 33%;
+  --chart-2: 198 24% 36%;
+  --chart-3: 42 42% 70%;
+  --chart-4: 190 22% 55%;
+  --chart-5: 198 16% 24%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-serif: 'Outfit', sans-serif;
@@ -158,40 +157,40 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 270 22% 6%;
-  --foreground: 260 30% 95%;
-  --border: 270 20% 18%;
-  --card: 270 22% 9%;
-  --card-foreground: 260 30% 95%;
-  --card-border: 270 20% 18%;
-  --sidebar: 270 22% 9%;
-  --sidebar-foreground: 260 30% 95%;
-  --sidebar-border: 270 20% 18%;
-  --sidebar-primary: 320 90% 62%;
+  --background: 198 20% 16%;
+  --foreground: 42 28% 94%;
+  --border: 198 16% 28%;
+  --card: 198 22% 20%;
+  --card-foreground: 42 28% 94%;
+  --card-border: 198 16% 28%;
+  --sidebar: 198 22% 20%;
+  --sidebar-foreground: 42 28% 94%;
+  --sidebar-border: 198 16% 28%;
+  --sidebar-primary: 194 52% 33%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 270 20% 14%;
-  --sidebar-accent-foreground: 260 30% 95%;
-  --sidebar-ring: 320 90% 62%;
-  --popover: 270 22% 9%;
-  --popover-foreground: 260 30% 95%;
-  --popover-border: 270 20% 18%;
-  --primary: 320 90% 62%;
+  --sidebar-accent: 198 16% 24%;
+  --sidebar-accent-foreground: 42 28% 94%;
+  --sidebar-ring: 194 52% 33%;
+  --popover: 198 22% 20%;
+  --popover-foreground: 42 28% 94%;
+  --popover-border: 198 16% 28%;
+  --primary: 194 52% 33%;
   --primary-foreground: 0 0% 100%;
-  --secondary: 270 25% 12%;
-  --secondary-foreground: 260 30% 95%;
-  --muted: 270 20% 13%;
-  --muted-foreground: 270 10% 56%;
-  --accent: 320 55% 18%;
-  --accent-foreground: 320 90% 82%;
+  --secondary: 42 42% 88%;
+  --secondary-foreground: 198 24% 22%;
+  --muted: 198 16% 24%;
+  --muted-foreground: 42 14% 74%;
+  --accent: 198 18% 27%;
+  --accent-foreground: 42 28% 94%;
   --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 260 30% 95%;
-  --input: 270 20% 18%;
-  --ring: 320 90% 62%;
-  --chart-1: 320 90% 62%;
-  --chart-2: 270 60% 70%;
-  --chart-3: 320 50% 40%;
-  --chart-4: 270 10% 56%;
-  --chart-5: 270 20% 20%;
+  --destructive-foreground: 42 28% 94%;
+  --input: 198 16% 28%;
+  --ring: 194 52% 33%;
+  --chart-1: 194 52% 33%;
+  --chart-2: 198 24% 36%;
+  --chart-3: 42 42% 70%;
+  --chart-4: 190 22% 55%;
+  --chart-5: 198 16% 24%;
 
   --shadow-2xs: 0px 2px 0px 0px rgba(0,0,0,0.3);
   --shadow-xs: 0px 2px 0px 0px rgba(0,0,0,0.4);

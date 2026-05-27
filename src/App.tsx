@@ -181,8 +181,7 @@ function Home() {
             Web Design & Digital Support for Small Businesses in <span className="text-primary">Wales</span> and <span className="text-primary">Pembrokeshire</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-medium">
-            Get web design, booking systems, and practical digital support tailored for small businesses across <strong>Wales</strong>{" "}
-            {"and "}<strong>Pembrokeshire</strong>. Build a clearer online presence with tools that work in your day-to-day business.
+            Most small businesses in Wales have a website that cost them money and doesn&apos;t do much else. I fix that — and I make sure you understand it, so you&apos;re never dependent on anyone to keep it running.
           </p>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold uppercase tracking-wider mb-6 border border-primary/20">
             <span className="relative flex h-2 w-2">
@@ -213,14 +212,14 @@ function Home() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="h-14 px-8 text-base rounded-full shadow-xl shadow-primary/25 w-full sm:w-auto group" data-testid="button-hero-primary">
-              <a href="#contact" onClick={smoothScroll}>
-                Send an Enquiry
+              <a href="#services" onClick={smoothScroll}>
+                View Services
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full w-full sm:w-auto" data-testid="button-hero-secondary">
-              <a href={`mailto:${enquiryEmail}`}>
-                Email Oen Digitals
+              <a href="#contact" onClick={smoothScroll}>
+                Get in Touch
               </a>
             </Button>
           </div>
@@ -237,41 +236,27 @@ function Home() {
           {[...Array(3)].map((_, i) => (
             <div key={i} className="flex items-center shrink-0">
               {[
-                "OEN Digitals",
-                "Digital Strategy",
-                "Web Development",
-                "Digital Literacy Coaching",
+                "Web Design",
+                "Digital Coaching",
+                "SEO",
+                "Booking Systems",
                 "Accessibility Audits",
-                "Digital Transformation",
-                "SEO Optimisation",
-                "Small Business Growth",
-                "UX & Inclusive Design",
-                "Tech Empowerment",
+                "Workflow Automation",
+                "SEND-Friendly Tools",
+                "Digital Strategy",
                 "Online Presence",
                 "Digital Confidence",
-                "OEN Digitals",
-                "SEND-Friendly Web Apps",
-                "Workflow Automation",
-                "Digital Clarity",
-                "View Services",
               ].map((word, j) => (
-                word === "View Services" ? (
-                  <a
-                    key={j}
-                    href="#services"
-                    onClick={smoothScroll}
-                    className="inline-flex items-center gap-4 px-6 text-sm font-semibold uppercase tracking-widest transition-colors hover:text-primary"
-                    data-testid="ticker-link-services"
-                  >
-                    <span className="text-primary">{word}</span>
-                    <span className="text-primary/30 text-lg">✦</span>
-                  </a>
-                ) : (
-                  <span key={j} className="inline-flex items-center gap-4 px-6 text-sm font-semibold uppercase tracking-widest">
-                    <span className="text-primary">{word}</span>
-                    <span className="text-primary/30 text-lg">✦</span>
-                  </span>
-                )
+                <a
+                  key={j}
+                  href="#services"
+                  onClick={smoothScroll}
+                  className="inline-flex items-center gap-4 px-6 text-sm font-semibold uppercase tracking-widest transition-colors hover:text-primary"
+                  data-testid="ticker-link-services"
+                >
+                  <span className="text-primary">{word}</span>
+                  <span className="text-primary/40 text-lg">·</span>
+                </a>
               ))}
             </div>
           ))}
@@ -290,7 +275,7 @@ function Home() {
             data-testid="section-social-proof"
           >
             <p className="text-xl md:text-3xl font-serif max-w-4xl mx-auto leading-relaxed">
-              "Clients have saved up to <span className="text-primary font-bold">6 hours a week</span> by simplifying daily digital workflows."
+              "I&apos;ve helped clients save up to <span className="text-primary font-bold">6 hours a week</span> just by simplifying the digital tools they were already using."
             </p>
           </motion.div>
         </div>
@@ -318,7 +303,7 @@ function Home() {
           <div className="mb-16 md:w-2/3">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">Core Services</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-foreground">Website Design, Digital Coaching & SEO Support</h3>
-            <p className="text-lg text-muted-foreground mt-4 max-w-2xl">Get practical web design and digital support tailored to your business. From responsive websites to digital confidence coaching, each service is built to help your business communicate clearly and convert more of the right enquiries.</p>
+            <p className="text-lg text-muted-foreground mt-4 max-w-2xl">No packages, no upsells, no overwhelming you with things you don&apos;t need. Just the right tools, explained properly, built to last.</p>
           </div>
 
           {/* Services hero image */}
@@ -346,25 +331,25 @@ function Home() {
             <ServiceCard 
               icon={<Compass className="h-8 w-8 text-primary" />}
               title="Digital Strategy & Road Map"
-              description="Clear objectives and direction before building anything. We map out exactly what you need and, more importantly, what you don't."
+              description="Before we build anything, we figure out exactly what you need — and just as importantly, what you don&apos;t. No guessing, no wasted money."
               delay={0.1}
             />
             <ServiceCard 
               icon={<User className="h-8 w-8 text-primary" />}
-              title="Confidence-First Web Apps"
-              description="Intuitive tools designed for everyone, including those with low digital literacy or SEND needs. Usability is never an afterthought."
+              title="Confidence-First Web Design"
+              description="Built for everyone, including people with low digital confidence or SEND needs. A website that confuses your visitors isn&apos;t working for you."
               delay={0.2}
             />
             <ServiceCard 
               icon={<Shield className="h-8 w-8 text-primary" />}
               title="Digital Literacy Coaching"
-              description="One-on-one sessions so you never feel reliant on an agency again. Build the muscle memory to manage your own platforms."
+              description="One-to-one sessions so you actually understand what you&apos;ve got and how to use it. You&apos;ll never need to call someone just to change a word on your own website again."
               delay={0.3}
             />
             <ServiceCard 
               icon={<Eye className="h-8 w-8 text-primary" />}
               title="Accessibility Audits"
-              description="Inclusive digital services for people of all abilities. Ensure your brand is welcoming to every single visitor."
+              description="Your website should be welcoming to every single person who lands on it. I&apos;ll make sure it is."
               delay={0.4}
             />
           </div>
@@ -407,19 +392,22 @@ function Home() {
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">A Trusted Human Guide</h3>
             <div className="prose prose-lg text-muted-foreground prose-p:leading-relaxed">
               <p className="text-xl text-foreground font-medium mb-6">
-                "No technical lectures. Just practical support."
+                "I&apos;m not here to lecture you on technical specs."
               </p>
               <p>
-                "You get a clear partner who translates digital complexity into simple next steps your business can actually use."
+                "I&apos;m here as your partner — someone who asks questions, listens properly, and builds something that actually fits how you work."
               </p>
               <p>
-                Technology should amplify your work, not create friction. Your setup is streamlined around clarity, confidence, and results you can maintain long term.
+                Technology should make your life easier, not give you a headache every time you need to change something.
+              </p>
+              <p>
+                Whether you&apos;ve got a half-built website you&apos;re embarrassed about, tools you&apos;re paying for but not using, or you&apos;re starting from scratch — wherever you&apos;re at is fine. We start there.
               </p>
             </div>
             
             <div className="mt-8 flex items-center gap-4">
               <div className="h-px bg-border flex-1"></div>
-              <span className="font-serif font-medium text-foreground tracking-widest uppercase text-sm">Consultant & Specialist</span>
+              <span className="font-serif font-medium text-foreground tracking-widest uppercase text-sm">Consultant & Specialist — Pembrokeshire & Wales</span>
             </div>
           </motion.div>
         </div>
@@ -430,8 +418,7 @@ function Home() {
         <div className="max-w-6xl mx-auto" data-testid="section-process">
           <div className="text-center mb-16">
             <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-3">How We Work</h2>
-            <h3 className="text-4xl md:text-5xl font-bold text-foreground">Our Three-Step Process: Clarity, Strategy, Autonomy</h3>
-            <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">We guide you through a simple journey from identifying your digital challenges to building confidence and independence in managing your own online presence.</p>
+            <h3 className="text-4xl md:text-5xl font-bold text-foreground">Three steps. No jargon. No overwhelm.</h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -440,19 +427,19 @@ function Home() {
             <ProcessStep 
               number="01"
               title="Clarity"
-              description="Identify exactly where you feel stuck. We map the friction points without the jargon."
+              description="We work out exactly where you&apos;re stuck. Not assumptions, not guesses — a proper conversation about what&apos;s not working and why."
               delay={0.1}
             />
             <ProcessStep 
               number="02"
               title="Strategy"
-              description="A simple, step-by-step road map tailored to your pace. No overwhelming overhauls."
+              description="A straightforward plan, at your pace. Nothing gets built until you understand what it&apos;s for and why it matters."
               delay={0.3}
             />
             <ProcessStep 
               number="03"
               title="Autonomy"
-              description="Tools built for you, with total confidence to use them. You hold the keys."
+              description="You walk away with tools that work and the confidence to use them. You hold the keys — always."
               delay={0.5}
             />
           </div>
@@ -471,17 +458,22 @@ function Home() {
           className="max-w-3xl mx-auto relative z-10"
           data-testid="section-contact"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">Ready to take control?</h2>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">Ready to get started?</h2>
           <p className="text-xl text-secondary-foreground/70 mb-8 max-w-xl mx-auto">
-            Send an enquiry below and you will get a clear next-step response as soon as possible.
+            Send me a message and I&apos;ll get back to you shortly. No sales pitch, just a conversation.
           </p>
           
           <ContactForm />
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button size="lg" asChild className="h-14 px-8 text-base rounded-full w-full sm:w-auto" data-testid="button-footer-primary">
+              <a href="#contact" onClick={smoothScroll}>
+                Send an Enquiry
+              </a>
+            </Button>
             <Button size="lg" variant="outline" asChild className="h-14 px-8 text-base rounded-full border-secondary-foreground/20 hover:bg-secondary-foreground hover:text-secondary w-full sm:w-auto" data-testid="button-footer-secondary">
               <a href={`mailto:${enquiryEmail}`}>
-                Email Oen Digitals
+                Email Me Directly
               </a>
             </Button>
           </div>
@@ -579,7 +571,7 @@ function Seo({ title, description }: { title: string; description: string }) {
 function SiteFooter() {
   return (
     <footer className="py-8 text-center text-muted-foreground bg-secondary/95 text-sm border-t border-white/5">
-      <p>&copy; {new Date().getFullYear()} Digital Empowerment Specialist. All rights reserved.</p>
+      <p>&copy; 2026 Oen Digitals. All rights reserved.</p>
       <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
         <a
           href="/how-it-works"
