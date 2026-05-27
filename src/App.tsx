@@ -709,7 +709,7 @@ function HowItWorksPage() {
       tag: "Stage one",
       title: "First Conversation",
       intro:
-        "We start with a relaxed chat by email, phone or in person about what your business actually needs.",
+        "Start with a relaxed chat by email, phone or in person focused on what your business actually needs.",
       bullets: [
         "Simple questions about your goals and what you already have",
         "No jargon and no pressure",
@@ -717,12 +717,12 @@ function HowItWorksPage() {
         "Nothing starts until you are happy",
       ],
       note:
-        "You do not need everything ready before we speak. We can work with what you have and help fill in the gaps.",
+        "You do not need everything ready before the first conversation. Your project can begin with what you already have, then fill in gaps as you go.",
     },
     {
       number: "2",
       tag: "Stage two",
-      title: "We Get to Work",
+      title: "Build & Setup",
       intro:
         "Once approved, the build begins with practical milestone updates and clear progress.",
       bullets: [
@@ -746,7 +746,7 @@ function HowItWorksPage() {
         "No launch without your sign-off",
       ],
       note:
-        "If something does not feel right, we adjust it. The goal is a result you are genuinely happy with.",
+        "If something does not feel right, it gets adjusted. The goal is a result you are genuinely happy with.",
     },
     {
       number: "4",
@@ -850,9 +850,9 @@ function HowItWorksPage() {
 
         <section className="bg-secondary px-6 py-16 text-secondary-foreground md:px-12">
           <div className="mx-auto max-w-5xl">
-            <h2 className="mb-4 text-center text-4xl font-bold">What we need from you</h2>
+            <h2 className="mb-4 text-center text-4xl font-bold">What helps your project start smoothly</h2>
             <p className="mx-auto mb-8 max-w-3xl text-center text-secondary-foreground/80">
-              A few basics help us get moving quickly, but if you are missing something we can guide you through it.
+              A few basics help the project move quickly. If anything is missing, you still get clear guidance on what to prepare next.
             </p>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {[
@@ -884,9 +884,9 @@ function HowItWorksPage() {
 
         <section className="px-6 py-14 md:px-12 md:py-16">
           <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-3 text-3xl font-bold">How we communicate</h2>
+            <h2 className="mb-3 text-3xl font-bold">How communication works</h2>
             <p className="mx-auto mb-8 max-w-2xl text-muted-foreground">
-              Simple and manageable for both sides with milestone-based updates and practical support.
+              You get simple, manageable communication with milestone-based updates and practical support.
             </p>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {[
@@ -1130,7 +1130,7 @@ function PricingPage() {
           <div className="mx-auto max-w-6xl rounded-2xl border border-border/60 bg-secondary p-6 md:p-8">
             <h2 className="mb-2 text-2xl font-bold text-secondary-foreground">Ongoing platform costs paid directly to providers</h2>
             <p className="mb-5 text-sm leading-relaxed text-secondary-foreground/80">
-              These are separate from project fees and are standard costs of running a website. We explain exactly what you need before you commit.
+              These are separate from project fees and are standard costs of running a website. You get a clear explanation of exactly what is needed before committing.
             </p>
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-lg border border-border/50 bg-card p-4">
@@ -1222,16 +1222,15 @@ function WebsiteDesignPembrokeshire() {
             </h1>
             <div className="mx-auto mb-10 max-w-3xl space-y-5 text-xl leading-relaxed text-muted-foreground">
               <p>
-                Oen Digitals helps small businesses, sole traders and local
-                creatives build clear, modern websites that are easy to
+                Your business gets a clear, modern website that is easy to
                 understand, easy to update and designed to help customers take
                 action.
               </p>
               <p>
                 Whether you need a simple business website, a refreshed online
-                presence, a booking form, or support connecting your digital
-                tools, we can help you build something practical and
-                professional.
+                presence, a booking form, or support connecting digital
+                tools, you can get a practical and professional setup that
+                supports day-to-day operations.
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -1257,7 +1256,7 @@ function WebsiteDesignPembrokeshire() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-10 max-w-3xl">
               <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl">
-                Who We Work With
+                Who This Is For
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground">
                 Oen Digitals works with local businesses across Pembrokeshire
@@ -1267,7 +1266,7 @@ function WebsiteDesignPembrokeshire() {
             </div>
             <div className="mb-10 rounded-lg border border-border/50 bg-card p-6">
               <p className="mb-4 font-semibold text-foreground">
-                We commonly support:
+                Best suited for:
               </p>
               <div className="grid gap-3 text-muted-foreground sm:grid-cols-2 lg:grid-cols-3">
                 {[
@@ -1411,7 +1410,7 @@ function WebsiteDesignPembrokeshire() {
               <FeatureCard
                 icon={<Monitor className="h-7 w-7 text-primary" />}
                 title="Modern Digital Approach"
-                description="We combine website design, branding support and modern digital tools to help businesses build a stronger online presence in a practical and manageable way."
+                description="Get website design, branding support and modern digital tools combined into one practical, manageable setup for stronger online visibility."
               />
               <FeatureCard
                 icon={<User className="h-7 w-7 text-primary" />}
@@ -1548,12 +1547,12 @@ function WebsiteDesignPembrokeshire() {
             <div className="mx-auto mb-8 max-w-2xl space-y-4 text-lg leading-relaxed text-muted-foreground">
               <p>
                 Whether you need a new website, digital support, branding
-                guidance or help improving your online visibility, Oen Digitals
-                is here to help.
+                guidance or help improving online visibility, you can get a
+                clear plan and practical support.
               </p>
               <p>
-                Get in touch to discuss your project, ask questions or explore
-                ideas for your business.
+                Get in touch to discuss your project, ask questions, and choose
+                the best next step for your business.
               </p>
             </div>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
