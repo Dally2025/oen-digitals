@@ -3,12 +3,28 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const vitePrerender = require("vite-plugin-prerender");
 
 const rawPort = process.env.PORT ?? "5000";
 const parsedPort = Number(rawPort);
 const port = Number.isNaN(parsedPort) || parsedPort <= 0 ? 5000 : parsedPort;
 
 const basePath = process.env.BASE_PATH ?? "/";
+const outputDir = path.resolve(import.meta.dirname, "dist/public");
+const prerenderRoutes = [
+  "/",
+  "/how-it-works",
+  "/pricing",
+  "/website-design-pembrokeshire",
+  "/privacy-policy",
+  "/cookie",
+  "/terms-and-conditions",
+  "/complaints",
+  "/complaints-procedure",
+];
 
 export default defineConfig({
   base: basePath,
@@ -16,6 +32,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
     runtimeErrorOverlay(),
+    vitePrerender({
+      staticDir: outputDir,
+      routes: prerenderRoutes,
+    }),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
@@ -39,7 +59,7 @@ export default defineConfig({
   },
   root: path.resolve(import.meta.dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, "dist/public"),
+    outDir: outputDir,
     emptyOutDir: true,
     rollupOptions: {
       output: {
