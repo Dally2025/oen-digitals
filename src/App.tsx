@@ -1709,6 +1709,16 @@ function Router() {
 }
 
 function App() {
+  React.useEffect(() => {
+    const frameId = requestAnimationFrame(() => {
+      document.dispatchEvent(new Event("app-rendered"));
+    });
+
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
+  }, []);
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
