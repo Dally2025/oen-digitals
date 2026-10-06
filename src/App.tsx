@@ -12,6 +12,7 @@ import aboutImage from "@assets/ChatGPT_Image_May_4,_2026,_06_03_24_PM_177791421
 import servicesImage from "@assets/ChatGPT_Image_May_4,_2026,_06_05_49_PM_1777914363236.png";
 import logo from "@assets/oendigitalslogo2.png";
 import StickyBanner from "@/components/sticky-banner";
+import heroArt from "../attached_assets/own halloween.jpeg";
 
 const queryClient = new QueryClient();
 const privacyPolicyUrl =
@@ -189,9 +190,9 @@ function Home() {
         <div className="absolute inset-0 -z-10" aria-hidden>
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,246,238,1)] to-[rgba(255,240,230,1)]"></div>
           {/* left perimeter decoration using background-position to focus pumpkin area */}
-          <div className="halloween-hero__decor--left" style={{backgroundImage:`url('/attached_assets/own halloween.jpeg')`}} />
+          <div className="halloween-hero__decor--left" style={{backgroundImage:`url(${heroArt})`}} />
           {/* right perimeter decoration focusing on bottom-right pumpkin */}
-          <div className="halloween-hero__decor--right" style={{backgroundImage:`url('/attached_assets/own halloween.jpeg')`}} />
+          <div className="halloween-hero__decor--right" style={{backgroundImage:`url(${heroArt})`}} />
           <div className="hero-overlay" aria-hidden />
         </div>
         

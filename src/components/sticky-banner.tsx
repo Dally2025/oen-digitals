@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import art from "../../attached_assets/own halloween.jpeg";
 
 type StickyBannerProps = {
   id: string;
@@ -61,7 +62,7 @@ const StickyBanner: React.FC<StickyBannerProps> = ({
 
   if (!visible) return null;
 
-  const art = "/attached_assets/own halloween.jpeg";
+  // use imported `art` (Vite-bundled URL)
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[9999] halloween-banner halloween-root" role="region" aria-label="Halloween offer banner">
