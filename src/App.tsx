@@ -8,7 +8,6 @@ import { ArrowRight, Bot, Brush, Compass, FileText, MapPin, MessageSquare, Monit
 import { motion } from "framer-motion";
 import NotFound from "@/pages/not-found";
 import React from "react";
-import Promo from "@/components/promo";
 import aboutImage from "@assets/ChatGPT_Image_May_4,_2026,_06_03_24_PM_1777914210882.png";
 import servicesImage from "@assets/ChatGPT_Image_May_4,_2026,_06_05_49_PM_1777914363236.png";
 import logo from "@assets/oendigitalslogo2.png";
@@ -167,18 +166,7 @@ function Home() {
         </div>
       </nav>
 
-      {/* Promotional modal/banner (first shown as modal, then collapses to sticky banner) */}
-      <Promo
-        id="halloween-2026"
-        image="/attached_assets/own%20halloween.jpeg"
-        headline="🎃 Halloween Offer — Starter Websites from £650"
-        copy="Starter websites from £650. Quick, accessible and practical."
-        ctaText="Book Now"
-        ctaHref="#contact"
-        startDate="2026-10-01"
-        endDate="2026-11-01"
-        theme="halloween"
-      />
+      {/* Promo temporarily disabled in production while we investigate blank-page issue. */}
 
       {/* Hero Section */}
       <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 md:px-12 overflow-hidden flex flex-col items-center text-center">
