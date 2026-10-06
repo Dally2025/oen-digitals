@@ -75,68 +75,68 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  /* Coastal palette: harbour slate base, deep tide highlights, linen sand support */
-  --background: 198 20% 16%;
-  --foreground: 42 28% 94%;
+  /* Calm feminine palette: sand, beige and soft clay tones */
+  --background: 36 44% 96%;
+  --foreground: 206 24% 24%;
 
-  --border: 198 16% 28%;
+  --border: 30 28% 82%;
 
-  --card: 198 22% 20%;
-  --card-foreground: 42 28% 94%;
-  --card-border: 198 16% 28%;
+  --card: 40 48% 98%;
+  --card-foreground: 206 24% 24%;
+  --card-border: 30 30% 84%;
 
-  --sidebar: 198 22% 20%;
-  --sidebar-foreground: 42 28% 94%;
-  --sidebar-border: 198 16% 28%;
-  --sidebar-primary: 194 52% 33%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 198 16% 24%;
-  --sidebar-accent-foreground: 42 28% 94%;
-  --sidebar-ring: 194 52% 33%;
+  --sidebar: 40 48% 98%;
+  --sidebar-foreground: 206 24% 24%;
+  --sidebar-border: 30 30% 84%;
+  --sidebar-primary: 22 42% 45%;
+  --sidebar-primary-foreground: 35 60% 97%;
+  --sidebar-accent: 330 28% 88%;
+  --sidebar-accent-foreground: 206 24% 24%;
+  --sidebar-ring: 22 42% 45%;
 
-  --popover: 198 22% 20%;
-  --popover-foreground: 42 28% 94%;
-  --popover-border: 198 16% 28%;
+  --popover: 40 48% 98%;
+  --popover-foreground: 206 24% 24%;
+  --popover-border: 30 30% 84%;
 
-  /* Deep tide accent */
-  --primary: 194 52% 33%;
-  --primary-foreground: 0 0% 100%;
+  /* Soft clay accent */
+  --primary: 22 42% 45%;
+  --primary-foreground: 35 60% 97%;
 
-  /* Linen sand support surface */
-  --secondary: 42 42% 88%;
-  --secondary-foreground: 198 24% 22%;
+  /* Warm sand support surface */
+  --secondary: 35 46% 91%;
+  --secondary-foreground: 206 24% 24%;
 
-  --muted: 198 16% 24%;
-  --muted-foreground: 42 14% 74%;
+  --muted: 33 32% 92%;
+  --muted-foreground: 205 15% 41%;
 
-  --accent: 198 18% 27%;
-  --accent-foreground: 42 28% 94%;
+  --accent: 330 28% 88%;
+  --accent-foreground: 206 24% 24%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
 
-  --input: 198 16% 28%;
-  --ring: 194 52% 33%;
+  --input: 30 28% 85%;
+  --ring: 22 42% 45%;
 
-  --chart-1: 194 52% 33%;
-  --chart-2: 198 24% 36%;
-  --chart-3: 42 42% 70%;
-  --chart-4: 190 22% 55%;
-  --chart-5: 198 16% 24%;
+  --chart-1: 22 42% 45%;
+  --chart-2: 330 28% 72%;
+  --chart-3: 38 36% 66%;
+  --chart-4: 198 22% 54%;
+  --chart-5: 30 28% 78%;
 
   --app-font-sans: 'Plus Jakarta Sans', sans-serif;
   --app-font-serif: 'Outfit', sans-serif;
   --app-font-mono: Menlo, monospace;
   --radius: 0.5rem;
 
-  --shadow-2xs: 0px 2px 0px 0px rgba(0,0,0,0.3);
-  --shadow-xs: 0px 2px 0px 0px rgba(0,0,0,0.4);
-  --shadow-sm: 0px 2px 0px 0px rgba(0,0,0,0.4), 0px 1px 2px -1px rgba(0,0,0,0.4);
-  --shadow: 0px 2px 0px 0px rgba(0,0,0,0.5), 0px 1px 2px -1px rgba(0,0,0,0.5);
-  --shadow-md: 0px 2px 0px 0px rgba(0,0,0,0.6), 0px 2px 4px -1px rgba(0,0,0,0.6);
-  --shadow-lg: 0px 2px 0px 0px rgba(0,0,0,0.65), 0px 4px 6px -1px rgba(0,0,0,0.65);
-  --shadow-xl: 0px 2px 0px 0px rgba(0,0,0,0.7), 0px 8px 10px -1px rgba(0,0,0,0.7);
-  --shadow-2xl: 0px 2px 0px 0px rgba(0,0,0,0.8);
+  --shadow-2xs: 0px 1px 0px 0px rgba(118, 92, 75, 0.18);
+  --shadow-xs: 0px 1px 0px 0px rgba(118, 92, 75, 0.22);
+  --shadow-sm: 0px 1px 0px 0px rgba(118, 92, 75, 0.22), 0px 1px 2px -1px rgba(118, 92, 75, 0.22);
+  --shadow: 0px 1px 0px 0px rgba(118, 92, 75, 0.26), 0px 1px 2px -1px rgba(118, 92, 75, 0.26);
+  --shadow-md: 0px 1px 0px 0px rgba(118, 92, 75, 0.3), 0px 2px 4px -1px rgba(118, 92, 75, 0.3);
+  --shadow-lg: 0px 1px 0px 0px rgba(118, 92, 75, 0.34), 0px 4px 6px -1px rgba(118, 92, 75, 0.34);
+  --shadow-xl: 0px 1px 0px 0px rgba(118, 92, 75, 0.38), 0px 8px 10px -1px rgba(118, 92, 75, 0.38);
+  --shadow-2xl: 0px 1px 0px 0px rgba(118, 92, 75, 0.44);
 
   --tracking-normal: 0em;
   --spacing: 0.25rem;

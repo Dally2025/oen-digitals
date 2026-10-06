@@ -31,7 +31,7 @@ const META = {
   "/": {
     title: "Web Design & Digital Support in Wales | OEN Digitals",
     description:
-      "Web design, booking systems, and digital literacy coaching for small businesses in Pembrokeshire and Wales. Build simple, effective websites and tools with confidence.",
+      "Web design, booking systems and digital coaching for small businesses in Pembrokeshire and Wales. Simple, effective websites built with confidence.",
   },
   "/how-it-works": {
     title: "How It Works | Oen Digitals – Web Design Pembrokeshire",
@@ -84,7 +84,8 @@ function escapeHtml(value) {
     .replace(/'/g, "&#39;");
 }
 
-function injectPageMeta(html, title, description) {
+function injectPageMeta(html, route, title, description) {
+  const canonicalUrl = `https://oendigitals.co.uk${route === "/" ? "/" : route}`;
   let output = html.replace(
     /<title>.*?<\/title>/s,
     `<title>${escapeHtml(title)}</title>`,
@@ -101,6 +102,32 @@ function injectPageMeta(html, title, description) {
       `$&\n    <meta name="description" content="${escapeHtml(description)}" />`,
     );
   }
+
+  output = output
+    .replace(
+      /<link rel="canonical" href="[^"]*"\s*\/?>/,
+      `<link rel="canonical" href="${canonicalUrl}" />`,
+    )
+    .replace(
+      /<meta property="og:title" content="[^"]*"\s*\/?>/,
+      `<meta property="og:title" content="${escapeHtml(title)}">`,
+    )
+    .replace(
+      /<meta property="og:description" content="[^"]*"\s*\/?>/,
+      `<meta property="og:description" content="${escapeHtml(description)}">`,
+    )
+    .replace(
+      /<meta property="og:url" content="[^"]*"\s*\/?>/,
+      `<meta property="og:url" content="${canonicalUrl}">`,
+    )
+    .replace(
+      /<meta name="twitter:title" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:title" content="${escapeHtml(title)}">`,
+    )
+    .replace(
+      /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:description" content="${escapeHtml(description)}">`,
+    );
 
   return output;
 }
@@ -140,7 +167,12 @@ async function main() {
         `<div id="root">${appHtml}</div>`,
       );
 
-      const finalHtml = injectPageMeta(pageHtml, meta.title, meta.description);
+      const finalHtml = injectPageMeta(
+        pageHtml,
+        route,
+        meta.title,
+        meta.description,
+      );
 
       const outDir = route === "/" ? DIST_DIR : path.join(DIST_DIR, route);
       fs.mkdirSync(outDir, { recursive: true });

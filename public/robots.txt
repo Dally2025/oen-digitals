@@ -7,4 +7,4 @@ Allow: /
 User-agent: Facebot
 Allow: /
 
-Sitemap: https://www.oendigitals.co.uk/sitemap.xml
+Sitemap: https://oendigitals.co.uk/sitemap.xml
