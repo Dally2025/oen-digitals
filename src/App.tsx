@@ -11,6 +11,7 @@ import React from "react";
 import aboutImage from "@assets/ChatGPT_Image_May_4,_2026,_06_03_24_PM_1777914210882.png";
 import servicesImage from "@assets/ChatGPT_Image_May_4,_2026,_06_05_49_PM_1777914363236.png";
 import logo from "@assets/oendigitalslogo2.png";
+import StickyBanner from "@/components/sticky-banner";
 
 const queryClient = new QueryClient();
 const privacyPolicyUrl =
@@ -166,7 +167,16 @@ function Home() {
         </div>
       </nav>
 
-      {/* Promo temporarily disabled in production while we investigate blank-page issue. */}
+      {/* Sticky Halloween banner */}
+      <StickyBanner
+        id="halloween-banner"
+        headline="Halloween Offer — Starter websites from £650"
+        copy="Get your business seen — quick accessible starter sites."
+        ctaText="Book Now"
+        ctaHref="#contact"
+        startDate="2026-10-01"
+        endDate="2026-11-01"
+      />
 
       {/* Hero Section */}
       <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 md:px-12 overflow-hidden flex flex-col items-center text-center">
