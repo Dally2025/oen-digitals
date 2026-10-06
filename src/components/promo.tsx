@@ -45,6 +45,15 @@ const Promo: React.FC<PromoProps> = ({
   useEffect(() => {
     if (!inDateRange()) return;
     try {
+      // quick test override: add `?promo=force` to URL to show modal regardless of localStorage
+      try {
+        const u = new URL(window.location.href);
+        if (u.searchParams.get("promo") === "force") {
+          setVisibleModal(true);
+          setVisibleBanner(false);
+          return;
+        }
+      } catch (e) {}
       const dismissed = localStorage.getItem(dismissedKey) === "true";
       const seen = localStorage.getItem(seenKey) === "true";
       if (dismissed) {
