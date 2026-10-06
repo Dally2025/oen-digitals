@@ -352,6 +352,21 @@
   .halloween-banner__center .price { font-size:18px }
 }
 
+/* Improve mobile stacking and prevent overlap */
+@media (max-width: 640px) {
+  .halloween-banner__inner { display:flex; flex-wrap:wrap; align-items:center; gap:8px; padding:8px 10px; min-height:72px }
+  .halloween-banner__left { width:auto; order:1; padding-left:8px }
+  .halloween-banner__right { width:auto; order:2; padding-right:8px; justify-content:flex-end; }
+  .halloween-banner__center { flex-basis:100%; order:3; text-align:center; padding:4px 8px }
+  .halloween-banner__center .price { font-size:16px }
+  .halloween-banner__left .title { font-size:14px; line-height:1 }
+  .halloween-banner__cta { padding:8px 12px; font-size:14px }
+  .halloween-banner__pumpkin, .halloween-banner__ghost { display:none }
+  .halloween-banner__left, .halloween-banner__right { display:flex; align-items:center; gap:8px }
+  .halloween-banner__center .sub { font-size:13px }
+  .halloween-banner__center, .halloween-banner__left, .halloween-banner__right { overflow-wrap: anywhere; word-break: break-word }
+}
+
 /* Hero sizing and decoration placement */
 .halloween-hero { min-height: 560px; display:flex; align-items:center; }
 .halloween-hero__decor--left { position:absolute; left:0; bottom:0; width:42%; height:100%; background-repeat:no-repeat; background-position:left bottom; background-size:contain; pointer-events:none }
@@ -363,6 +378,9 @@
 .halloween-banner__pumpkin { width:180px; height:80px; object-fit:cover; margin-left:6px }
 .halloween-banner__decor { pointer-events:none; position:absolute; z-index:5; color: rgba(255,255,255,0.9) }
 .halloween-banner__decor svg { width:44px; height:44px; color: rgba(255,255,255,0.95) }
+
+.halloween-banner__pumpkin--small { width:48px; height:48px; object-fit:cover; object-position: right bottom; border-radius:8px }
+.halloween-banner__ghost { object-fit:cover }
 
 
 @media (max-width: 768px) {

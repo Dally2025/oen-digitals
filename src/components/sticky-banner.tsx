@@ -80,7 +80,7 @@ const StickyBanner: React.FC<StickyBannerProps> = ({
         </div>
 
         <div className="halloween-banner__right">
-          <img src={art} alt="ghost" className="halloween-banner__ghost" />
+          <img src={art} alt="pumpkin" className="halloween-banner__ghost halloween-banner__pumpkin--small" />
           <a href={ctaHref} className="halloween-banner__cta">{ctaText}</a>
           <button onClick={dismiss} aria-label="Dismiss offer" className="text-white/90 hover:text-white ml-2 bg-transparent rounded px-2 py-1">✕</button>
         </div>
