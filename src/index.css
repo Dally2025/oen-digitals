@@ -361,7 +361,7 @@
   .halloween-banner__center .price { font-size:16px }
   .halloween-banner__left .title { font-size:14px; line-height:1 }
   .halloween-banner__cta { padding:8px 12px; font-size:14px }
-  .halloween-banner__pumpkin, .halloween-banner__ghost { display:none }
+  .halloween-banner__pumpkin { display:none }
   .halloween-banner__left, .halloween-banner__right { display:flex; align-items:center; gap:8px }
   .halloween-banner__center .sub { font-size:13px }
   .halloween-banner__center, .halloween-banner__left, .halloween-banner__right { overflow-wrap: anywhere; word-break: break-word }
