@@ -63,38 +63,35 @@ const StickyBanner: React.FC<StickyBannerProps> = ({
   if (!visible) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[9999]">
-      <div className="relative">
-        <div
-          className="w-full bg-cover bg-center rounded-b-lg shadow-lg"
-          style={{
-            backgroundImage: `url(${bannerImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="backdrop-brightness-75 bg-black/20">
-            <div className="max-w-6xl mx-auto px-4 sm:px-6">
-              <div className="relative flex items-center gap-4 py-3">
-                <div className="absolute left-4 top-1 transform -translate-y-1/2 text-white opacity-95">
-                  <CornerSpider className="h-10 w-10" />
-                </div>
-                <div className="absolute right-4 top-1 transform -translate-y-1/2 text-white opacity-95 rotate-12">
-                  <CornerBat className="h-10 w-10" />
-                </div>
+    <div className="fixed top-0 left-0 right-0 z-[9999] halloween-banner" role="region" aria-label="Halloween offer banner">
+      <div className="halloween-banner__inner max-w-7xl mx-auto relative">
+        <div className="halloween-banner__decor halloween-banner__left">
+          {/* Decorative pumpkins / spiderweb - pointer-events none */}
+          <svg className="opacity-95" width="180" height="120" viewBox="0 0 180 120" fill="none" aria-hidden>
+            <ellipse cx="60" cy="80" rx="48" ry="28" fill="#ff9b4a" />
+            <path d="M44 68c6 4 18 4 26 0 8 4 20 4 26 0" fill="#fff" opacity="0.06" />
+          </svg>
+        </div>
 
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">🎃</span>
-                  <div className="text-sm sm:text-base font-semibold text-white drop-shadow">{headline}</div>
-                  {copy && <div className="hidden md:block text-sm text-orange-100 ml-4">{copy}</div>}
-                </div>
-
-                <div className="ml-auto flex items-center gap-3">
-                  <a href={ctaHref} className="inline-flex items-center px-5 py-2 rounded-full text-sm font-semibold bg-orange-600 text-white hover:bg-orange-700 drop-shadow-lg">{ctaText}</a>
-                  <button onClick={dismiss} aria-label="Dismiss offer" className="text-white/90 hover:text-white ml-2 bg-black/20 rounded px-2 py-1">✕</button>
-                </div>
+        <div className="halloween-banner__center">
+          <div className="px-4 sm:px-6">
+            <div className="text-center">
+              <div className="text-sm font-bold tracking-wider text-orange-200 uppercase mb-1">HALLOWEEN OFFER</div>
+              <div className="text-lg md:text-2xl font-bold">
+                Starter websites from <span style={{color: 'var(--halloween-accent)'}} className="font-extrabold">£650</span>
               </div>
+              <div className="text-sm text-orange-100">Get your business seen — quick, accessible starter sites.</div>
             </div>
+          </div>
+        </div>
+
+        <div className="halloween-banner__decor halloween-banner__right">
+          <div className="flex items-center gap-3">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" aria-hidden className="pointer-events-none">
+              <path d="M12 2c1 0 2 .5 2 1.5S13 6 12 6s-2-2.5-2-2.5S11 2 12 2z" fill="#fff" opacity="0.9" />
+            </svg>
+            <a href={ctaHref} className="inline-flex items-center px-5 py-2 rounded-full text-sm font-semibold bg-orange-600 text-white hover:bg-orange-700">{ctaText}</a>
+            <button onClick={dismiss} aria-label="Dismiss offer" className="text-white/90 hover:text-white ml-2 bg-transparent rounded px-2 py-1">✕</button>
           </div>
         </div>
       </div>

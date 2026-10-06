@@ -286,3 +286,37 @@
   animation: ticker 9s linear infinite;
   will-change: transform;
 }
+
+/* Halloween campaign variables and utility classes (isolated) */
+:root.halloween {
+  --halloween-bg-dark-1: #160b08;
+  --halloween-bg-dark-2: #260d08;
+  --halloween-accent: #ff7a18;
+  --halloween-accent-dark: #ff5a00;
+  --halloween-cream-1: #fff6ee;
+  --halloween-cream-2: #fff0e6;
+}
+
+.halloween-banner {
+  background: linear-gradient(90deg, var(--halloween-bg-dark-1), var(--halloween-bg-dark-2));
+  color: white;
+}
+.halloween-banner__inner { min-height: 120px; display:flex; align-items:center; }
+.halloween-banner__decor { pointer-events: none; position: absolute; top:0; bottom:0; }
+.halloween-banner__left { left:0; width: 220px; display:flex; align-items:center; justify-content:flex-start; padding-left:12px }
+.halloween-banner__center { flex:1; text-align:center; }
+.halloween-banner__right { right:0; display:flex; align-items:center; gap:12px; padding-right:12px }
+
+.halloween-hero { background: linear-gradient(180deg, var(--halloween-cream-1), var(--halloween-cream-2)); position:relative; overflow:visible }
+.halloween-hero__decor { position:absolute; pointer-events:none; z-index:0 }
+.halloween-hero__center { position:relative; z-index:10 }
+
+@media (max-width: 640px) {
+  .halloween-banner__inner { min-height: 88px }
+  .halloween-banner__left { width: 120px }
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker { animation: none }
+}

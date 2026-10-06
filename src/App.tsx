@@ -179,8 +179,28 @@ function Home() {
       />
 
       {/* Hero Section */}
-      <section id="hero" className="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 md:px-12 overflow-hidden flex flex-col items-center text-center">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
+      <section id="hero" className="halloween-hero relative pt-28 pb-16 md:pt-40 md:pb-28 px-6 md:px-12 overflow-hidden flex flex-col items-center text-center">
+        <div className="halloween-hero__decor top-0 left-0 w-48 h-48 -translate-y-4 -translate-x-4">
+          {/* spiderweb + hanging spider */}
+          <svg className="pointer-events-none" width="160" height="160" viewBox="0 0 160 160" fill="none" aria-hidden>
+            <path d="M20 10 C40 20, 70 30, 80 30" stroke="#c9a07a" strokeWidth="2" />
+          </svg>
+        </div>
+        <div className="absolute inset-0 -z-10" aria-hidden>
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,246,238,1)] to-[rgba(255,240,230,1)]"></div>
+          <div className="absolute bottom-0 left-0 w-72 h-72 pointer-events-none">
+            {/* large glowing jack-o-lantern at bottom-left */}
+            <svg width="288" height="288" viewBox="0 0 288 288" aria-hidden>
+              <ellipse cx="140" cy="200" rx="120" ry="60" fill="#ff9b4a" opacity="0.95" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 right-0 w-48 h-48 pointer-events-none">
+            {/* small pumpkin / witch-hat composition */}
+            <svg width="160" height="160" viewBox="0 0 160 160" aria-hidden>
+              <circle cx="80" cy="90" r="36" fill="#ff8b3d" />
+            </svg>
+          </div>
+        </div>
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -189,7 +209,7 @@ function Home() {
           className="max-w-4xl mx-auto"
           data-testid="section-hero"
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] text-foreground">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-[1.1] text-foreground halloween-hero__center">
             Web Design & Digital Support for Small Businesses in <span className="text-primary">Wales</span> and <span className="text-primary">Pembrokeshire</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-medium">
