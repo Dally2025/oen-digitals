@@ -301,11 +301,16 @@
   background: linear-gradient(90deg, var(--halloween-bg-dark-1), var(--halloween-bg-dark-2));
   color: white;
 }
-.halloween-banner__inner { min-height: 120px; display:flex; align-items:center; }
+.halloween-banner__inner { min-height: 130px; display:flex; align-items:center; position:relative; padding:0 12px; }
+.halloween-banner__inner--tall { min-height: 140px }
 .halloween-banner__decor { pointer-events: none; position: absolute; top:0; bottom:0; }
-.halloween-banner__left { left:0; width: 220px; display:flex; align-items:center; justify-content:flex-start; padding-left:12px }
-.halloween-banner__center { flex:1; text-align:center; }
-.halloween-banner__right { right:0; display:flex; align-items:center; gap:12px; padding-right:12px }
+.halloween-banner__left { left:0; width: 260px; display:flex; align-items:center; justify-content:flex-start; padding-left:18px }
+.halloween-banner__center { flex:1; text-align:center; padding-top:6px; }
+.halloween-banner__right { right:0; display:flex; align-items:center; gap:12px; padding-right:18px }
+
+.halloween-banner__headline { font-family: var(--app-font-serif); font-weight:800; letter-spacing:0.02em }
+.halloween-banner__price { color: var(--halloween-accent); font-weight:900; font-size:1.6rem }
+.halloween-banner__cta { box-shadow: 0 6px 18px rgba(0,0,0,0.25); }
 
 .halloween-hero { background: linear-gradient(180deg, var(--halloween-cream-1), var(--halloween-cream-2)); position:relative; overflow:visible }
 .halloween-hero__decor { position:absolute; pointer-events:none; z-index:0 }
@@ -319,4 +324,48 @@
 /* Reduced motion respect */
 @media (prefers-reduced-motion: reduce) {
   .animate-ticker { animation: none }
+}
+
+/* Rebuild above-the-fold (banner + hero) styles for Halloween campaign */
+.halloween-root { }
+
+.halloween-banner {
+  background: linear-gradient(90deg, var(--halloween-bg-dark-1), var(--halloween-bg-dark-2));
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.45);
+}
+.halloween-banner__inner { min-height: 120px; display:flex; align-items:center; gap:16px; position:relative; }
+.halloween-banner__left { width:260px; padding-left:20px; display:flex; align-items:center }
+.halloween-banner__left .title { font-family: var(--app-font-serif); font-weight:800; font-size:26px; letter-spacing:0.06em; color: #fff; text-transform:uppercase; }
+.halloween-banner__center { flex:1; text-align:center }
+.halloween-banner__center .price { font-weight:800; color: var(--halloween-accent); font-size:28px }
+.halloween-banner__center .sub { color: #ffeede; margin-top:6px }
+.halloween-banner__right { width:280px; display:flex; align-items:center; justify-content:flex-end; gap:12px; padding-right:20px }
+.halloween-banner__ghost { width:56px; height:56px }
+.halloween-banner__cta { background: linear-gradient(180deg,var(--halloween-accent),var(--halloween-accent-dark)); padding:10px 20px; border-radius:999px; box-shadow: 0 6px 18px rgba(255,122,24,0.18); }
+
+@media (max-width: 768px) {
+  .halloween-banner__inner { min-height: 88px; padding: 8px 12px }
+  .halloween-banner__left { width:120px; padding-left:8px }
+  .halloween-banner__right { width:140px; padding-right:8px }
+  .halloween-banner__left .title { font-size:16px }
+  .halloween-banner__center .price { font-size:18px }
+}
+
+/* Hero sizing and decoration placement */
+.halloween-hero { min-height: 560px; display:flex; align-items:center; }
+.halloween-hero__decor--left { position:absolute; left:0; bottom:0; width:42%; height:100%; background-repeat:no-repeat; background-position:left bottom; background-size:contain; pointer-events:none }
+.halloween-hero__decor--right { position:absolute; right:0; bottom:0; width:40%; height:100%; background-repeat:no-repeat; background-position:right bottom; background-size:contain; pointer-events:none }
+.halloween-hero__center-inner { position:relative; z-index:20; max-width:920px; margin:0 auto; text-align:center }
+.halloween-hero .hero-overlay { position:absolute; inset:0; background: linear-gradient(180deg, rgba(255,246,238,0.0) 0%, rgba(255,235,220,0.6) 60%, rgba(255,200,160,0.9) 100%); pointer-events:none; }
+
+/* small helpers for banner decorations */
+.halloween-banner__pumpkin { width:180px; height:80px; object-fit:cover; margin-left:6px }
+.halloween-banner__decor { pointer-events:none; position:absolute; z-index:5; color: rgba(255,255,255,0.9) }
+.halloween-banner__decor svg { width:44px; height:44px; color: rgba(255,255,255,0.95) }
+
+
+@media (max-width: 768px) {
+  .halloween-hero { min-height: 420px }
+  .halloween-hero__decor--left, .halloween-hero__decor--right { display:none }
 }

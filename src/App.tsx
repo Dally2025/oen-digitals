@@ -188,18 +188,11 @@ function Home() {
         </div>
         <div className="absolute inset-0 -z-10" aria-hidden>
           <div className="absolute inset-0 bg-gradient-to-b from-[rgba(255,246,238,1)] to-[rgba(255,240,230,1)]"></div>
-          <div className="absolute bottom-0 left-0 w-72 h-72 pointer-events-none">
-            {/* large glowing jack-o-lantern at bottom-left */}
-            <svg width="288" height="288" viewBox="0 0 288 288" aria-hidden>
-              <ellipse cx="140" cy="200" rx="120" ry="60" fill="#ff9b4a" opacity="0.95" />
-            </svg>
-          </div>
-          <div className="absolute bottom-0 right-0 w-48 h-48 pointer-events-none">
-            {/* small pumpkin / witch-hat composition */}
-            <svg width="160" height="160" viewBox="0 0 160 160" aria-hidden>
-              <circle cx="80" cy="90" r="36" fill="#ff8b3d" />
-            </svg>
-          </div>
+          {/* left perimeter decoration using background-position to focus pumpkin area */}
+          <div className="halloween-hero__decor--left" style={{backgroundImage:`url('/attached_assets/own halloween.jpeg')`}} />
+          {/* right perimeter decoration focusing on bottom-right pumpkin */}
+          <div className="halloween-hero__decor--right" style={{backgroundImage:`url('/attached_assets/own halloween.jpeg')`}} />
+          <div className="hero-overlay" aria-hidden />
         </div>
         
         <motion.div 
@@ -1756,6 +1749,26 @@ function App() {
     return () => {
       cancelAnimationFrame(frameId);
     };
+  }, []);
+
+  // Toggle the isolated Halloween theme for the campaign period or when forced via ?promo=force
+  React.useEffect(() => {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const force = params.get("promo") === "force";
+      const now = new Date();
+      const campaignStart = new Date("2026-10-01T00:00:00Z");
+      const campaignEnd = new Date("2026-11-01T00:00:00Z");
+      const inRange = now >= campaignStart && now < campaignEnd;
+      if (force || inRange) {
+        document.documentElement.classList.add("halloween");
+      }
+      return () => {
+        document.documentElement.classList.remove("halloween");
+      };
+    } catch (e) {
+      // ignore
+    }
   }, []);
 
   return (
